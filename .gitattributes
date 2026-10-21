@@ -1,0 +1,6 @@
+* text=auto eol=lf
+data/raw/* -text
+*.pdf -text
+*.png -text
+*.parquet -text
+*.zip -text
