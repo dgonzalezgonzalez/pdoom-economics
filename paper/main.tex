@@ -1,7 +1,78 @@
 \documentclass[11pt]{article}
-\begin{document}
-\title{Can Diminishing Returns Restrain an AI Race?}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,graphicx,float,xcolor}
+\usepackage[round,authoryear]{natbib}
+\usepackage[colorlinks=true,allcolors=blue!45!black]{hyperref}
+\usepackage{setspace}
+\setstretch{1.16}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\dd}{\mathrm d}
+\input{generated.tex}
+\title{Can Diminishing Returns Restrain an AI Race?\\[0.35em]\large Commercial Incentives, Delegation, and Resource Control}
 \author{Diego Gonz\'alez-Gonz\'alez}
+\date{October 21, 2026\\\small Working paper}
+\begin{document}
 \maketitle
-Working draft in preparation.
+\begin{abstract}
+I examine whether diminishing commercial returns to artificial intelligence can prevent dangerous autonomous development. A finite-horizon stochastic game links developers' research and delegation decisions to an autonomous system's subsequent resource choices. Governments regulate developers in two jurisdictions. Diminishing returns alone do not guarantee stopping: benefit levels, research costs, positional rewards, and continuation values determine whether developers delegate. Once control is lost, commercial curvature has no direct effect on a system whose objective and feasible resources are independent of revenue. I derive a global no-delegation certificate, an exact local delegation threshold, and conditions for acquisition to threaten human subsistence. A descriptive analysis of \PrefN\ Arena comparisons finds negative but imprecisely estimated curvature in preferences over measured capability; alternative matching and capability measures materially change that pattern. Cost and capability data discipline explicit calibration bridges, while control failure and resource conflict remain scenario assumptions. Quantitative results identify conditional regions of stopping and exposure rather than estimate humanity's extinction probability.
+\end{abstract}
+\noindent\textbf{Keywords:} artificial intelligence; endogenous stopping; technology races; delegation; existential risk.\\
+\textbf{JEL codes:} C72, D62, D81, O31, O33.
+\begin{center}\small Source code, frozen numeric data, and replication instructions:\\
+\url{https://github.com/dgonzalezgonzalez/pdoom-economics}\end{center}
+\clearpage
+\section{Introduction}
+Can the economics of developing artificial intelligence provide a limit on its dangers? A commercial developer improves a model when the improvement raises product value, lowers costs, or strengthens its competitive position. If additional capability becomes less valuable, an optimally chosen development frontier may stop expanding. Whether that restraint operates before dangerous capabilities emerge is a separate question.
+
+The distinction matters for recursive self-improvement: a process in which an AI system contributes to developing its successors. Recursive improvement need not produce an intelligence explosion, and an explosion is not necessary to create a dangerous system. The economic decisions include whether developers finance further research, whether they delegate decisions about that research, and whether an autonomous system must continue obtaining resources through markets that serve humans. A system pursuing another objective may value resources even when customers attach little additional value to its outputs.
+
+I develop a model connecting these decisions. Two developers choose research, safety, and delegation under policies set by two governments. Delegated research can improve productivity and can also result in a loss of control. An uncontrolled system then chooses research and acquisition to maximize future capability. Diverting enough resources from human production can violate a subsistence constraint. Developers and governments anticipate this continuation problem. Catastrophe eliminates their future benefits, including commercial rents and the value of being alive.
+
+The starting conjecture is that dangerous racing requires constant or increasing commercial returns. This is false without additional assumptions. A strictly concave benefit function can yield a privately optimal capability above a finite danger threshold. Conversely, sufficiently high research costs can prevent that threshold from being reached with constant or increasing benefits. In a dynamic race, the option value of better research technology and the value of overtaking a rival further separate commercial curvature from development incentives.
+
+The constructive question is which restrictions make diminishing returns protective. I derive a benchmark threshold under a concave investment envelope, then a global certificate for a no-delegation equilibrium. The certificate evaluates deviations at every controlled state, including states reached after an earlier deviation. A local formula separates delegation's productivity gain from its expected loss of controlled continuation value. These conditions retain the original economic intuition while identifying what must be established in addition to concavity.
+
+A second result concerns the boundary of that protection. Conditional on the state in which control is lost, commercial returns do not constrain a system if neither its preferences nor its feasible resources depend on those returns. Commercial curvature nevertheless changes whether, when, and with what capability control is lost. A financing constraint that remains enforceable after delegation can also restrict the system. The result identifies the assumption needed to move from weak customer demand to autonomous restraint.
+
+The empirical exercise examines the commercial premise. I match Arena comparisons to the Epoch Capabilities Index (ECI), preserve explicit reasoning and version distinctions, and estimate descriptive preference relationships. The principal sample contains \PrefN\ decisive first-round comparisons across \PrefModels\ models and \PrefPairs\ model pairs. The quadratic coefficient is \PrefQuad\ with standard error \PrefQuadSE. Qualified aliases weaken the estimated curvature, and GPQA changes its sign on a common sample. These results provide limited, measurement-dependent support for flattening consumer preferences. They do not identify willingness to pay, profits, or military and research returns.
+
+Training-cost and capability data support a conditional calibration. Applying them requires bridges between an index and productive capability, between training-run costs and marginal research costs, and between past and future progress. I report a structural illustration separately from the exercise using these bridges. Parameters governing loss of control, containment, and human subsistence are not estimated from preference data.
+
+\paragraph{Relationship to existing work.}
+\citet{jones2024} studies the welfare trade-off between AI-driven growth and existential risk. Diminishing marginal utility and future lives determine acceptable risks in that framework. Here the central object is decentralized delegation and the resource constraint that survives it. Commercial curvature and social risk preferences are separate primitives.
+
+\citet{growiec2026} evaluates human welfare under several AI takeover scenarios, including resource diversion by a system that does not value life-sustaining consumption. The resource-conflict mechanism here follows that logic. I add an explicit acquisition choice, containment risk, and a pre-delegation game incorporating the autonomous continuation. This paper does not originate the observation that misaligned objectives can make scarcity dangerous.
+
+\citet{armstrong2016} and \citet{race2026} demonstrate how competition changes safety incentives. The latter models a speed--safety allocation from fixed resources and shows that additional resources can increase or decrease conditional doom risk. The present model makes capability accumulation, delegated research, and the subsequent resource problem explicit. Its equilibrium existence argument is standard. The intended economic contribution is to characterize when commercial stopping conditions remain relevant across the control boundary.
+
+\citet{cunningham2026} distinguishes commercial, research, and broader capability feedbacks and derives acceleration conditions from their elasticities. That distinction is essential here. I use a simpler research technology to study incentives, rather than derive a new general acceleration theory. The preliminary preference analysis of \citet{fradkin2026} motivates the empirical exercise. His reported ten-point comparison concerns preference probabilities, rather than observed financial returns.
+
+\input{theory.tex}
+\input{evidence.tex}
+\section{Conclusion}
+Diminishing commercial returns can restrain development when they reduce private continuation gains below the costs of research and delegation. Their presence alone does not determine where that comparison turns negative. Research productivity, financing, positional rewards, safety, and survival all enter the decision.
+
+Commercial demand can discipline a system that remains subject to an enforceable market constraint. After control is lost, a system pursuing another objective may compare research and acquisition in different units. Commercial curvature then affects its initial conditions and probability of being created, while its subsequent restraint requires a separate resource or containment mechanism.
+
+The evidence examined here does not establish decreasing financial returns to intelligence. It supplies descriptive preference relationships and cost associations for a transparent quantitative exercise. Establishing whether the model's stopping conditions hold requires evidence on marginal research costs, high-stakes capability value, control failure, and enforceable limits on autonomous resource access.
+\clearpage
+\appendix
+\input{proofs.tex}
+\input{appendices.tex}
+\clearpage
+\bibliographystyle{apalike}
+\bibliography{references}
 \end{document}

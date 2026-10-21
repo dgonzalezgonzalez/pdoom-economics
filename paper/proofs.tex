@@ -1,0 +1,56 @@
+\section{Proofs}\label{app:proofs}
+\begin{proof}[Proof of Proposition~\ref{prop:counter}]
+Set the danger threshold to $2$ and the value of life to $b=10$. Catastrophe probability is zero for $a\leq2$ and $p=0.001$ for $a>2$. Payoffs are
+\[
+ U(a)=\begin{cases}b+10(1-e^{-a})-a,&a\leq2,\\
+ (1-p)[b+10(1-e^{-a})]-a,&a>2.
+ \end{cases}
+\]
+Catastrophe therefore destroys both commercial benefits and life value. In the safe region, $U'(a)=10e^{-a}-1>0$, so its maximum is $U(2)=b+10(1-e^{-2})-2\simeq16.646647$. In the dangerous region the derivative is $10(1-p)e^{-a}-1$, giving the unique maximum $a_d=\log[10(1-p)]\simeq2.301585$. Its payoff is $(1-p)(b+10)-1-\log[10(1-p)]\simeq16.678415$, strictly exceeding the safe maximum. Gross commercial benefits have strictly negative second derivative everywhere. Mortality does not prevent the dangerous choice.
+
+For the second claim, let $R(a)=a$ and $C(a)=a^2$ with the same threshold. Safe payoff $b+a-a^2$ is uniquely maximized at $1/2$. For $a>2$, $a-a^2<-2$, and a nonnegative catastrophe probability weakly reduces the positive surviving-state benefit $b+a$. Every dangerous choice is inferior to $1/2$. Strictly increasing marginal benefits also permit stopping: $R(a)=a^2$ and $C(a)=2a^2+a$ give net benefit $-a^2-a$, maximized at zero. A nonnegative catastrophe probability cannot improve the dangerous choices.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:static}]
+Continuity and coercivity give existence; strict concavity gives uniqueness. At an interior point $\bar a>1$, the unique maximizer of a differentiable strictly concave objective is below $\bar a$ exactly when $F_\sigma'(\bar a)<0$. A negative derivative makes all points to the right inferior, while a sufficiently small move left improves the objective. Conversely, if the maximizer is below $\bar a$, concavity gives a negative derivative there; a zero derivative would make $\bar a$ another maximizer. Positive and zero derivatives analogously imply a maximizer above and at the threshold. Now $F_\sigma'(\bar a)=m\bar a^{-\sigma}-M$. For $M>0$ negativity is equivalent to $\sigma\log\bar a>\log(m/M)$. For $M\leq0$ the derivative is strictly positive.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:scale}]
+The inverse function theorem gives $\dd a/\dd z=1/h'(a)$. Differentiating $\widetilde R'(z)=R'(a)/h'(a)$ gives equation~\eqref{eq:transform}. For example, linear increasing $R(a)$ becomes strictly concave under $z=e^a$ and strictly convex under $z=\log a$ on $a>0$. A bijective transformation of the complete objective preserves every pairwise payoff comparison and maps $a^*$ into $h(a^*)$. Since $h$ is increasing, $a^*<\bar a$ is equivalent to $h(a^*)<h(\bar a)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:exist}]
+The autonomous terminal values are finite. At horizon one the maximum of a finite collection of finite expected rewards is attained. Repeating this operation defines an optimal Markov policy at every autonomous state and remaining horizon, including extinct and contained states. The associated human continuation values are finite.
+
+At each controlled state with one period remaining the developers face a finite normal-form game. It has a mixed Nash equilibrium \citep{nash1951}. Choose an equilibrium at every such state and use its payoffs as continuation values. At horizon two equation~\eqref{eq:Q} again defines finite games. Induction constructs equilibria at every controlled state and horizon. One-period equilibrium optimality together with the induction hypothesis rules out multistage deviations: after a first deviation the prescribed shorter-horizon continuation is itself an equilibrium at every resulting state. Strategies depend only on public state and time, so the profile is Markov and subgame perfect.
+
+After continuation equilibria are specified for every policy pair, the finite date-zero government game has a mixed Nash equilibrium. The planner recursion instead maximizes over finite joint-action sets, attaining an optimum at every state. Combining these constructions proves all claims.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:certificate}]
+Necessity follows from a one-period delegated deviation at any controlled state and horizon. Failure of equation~\eqref{eq:certificate} makes that deviation profitable when followed by $\pi^0$. For sufficiency, at horizon one the restricted equilibrium rules out every supervised deviation and the certificate rules out every delegated deviation. Suppose $\pi^0$ is an unrestricted equilibrium at all shorter horizons. At horizon $h$, continuations following any action are correctly valued by $V^0$ in controlled states and by the specified autonomous values following failure. Restricted-game optimality rules out supervised deviations; the certificate rules out delegated deviations. Longer deviations cannot improve on equilibrium continuations at shorter horizons. Induction proves equilibrium at all states and horizons. No delegated actions imply no failure and hence no extinction under the specified exclusive route. The argument does not restrict other equilibria.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:local}]
+The supervised action gives $r_s+\beta G_s$; the delegated action gives $r_s-\Delta c+\beta[(1-q)G_d+qZ_d]$. Subtraction gives equation~\eqref{eq:delegationgap}. Dividing by $\beta H>0$ gives the threshold and its boundary cases. For $H=0$ the difference is $N$, and division by a negative $H$ reverses the inequality. All statements hold continuation values fixed.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:PD}]
+Against pause, launching improves payoff by $(1-q)v-qB-c$. Against launch it improves payoff by $(1-q)^2v-q(1-q)B-c$. The lower bound in equation~\eqref{eq:PDinterval} makes the latter positive. Writing $X=(1-q)v-qB$, this means $(1-q)X>c$ and hence $X>c$ for $c\geq0$, so the former is also positive. Launch is strictly dominant. Mutual pause is better than mutual launch exactly when $B>(1-q)^2(B+v)-c$, the upper bound in the proposition. The interval has length $qB/(1-q)^2>0$. For any launch increment $a_L>0$, the strictly concave function $R(a)=v(1-e^{-a})/(1-e^{-a_L})$ gives $R(a_L)-R(0)=v$, embedding these payoffs in diminishing commercial benefits.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:boundary}]
+At horizon zero, terminal rewards and states are independent of $\sigma$. If $J_{h-1}$ and selected continuation policies are independent of $\sigma$, every feasible action's payoff in equation~\eqref{eq:AIBellman} is independent of $\sigma$. Feasibility and tie-breaking are also independent, so the selected maximizing action and $J_h$ are independent. Induct on $h$. The terminal conditions and recursions~\eqref{eq:D}--\eqref{eq:L} then imply the same property for $D_h$ and $L_h$. The argument does not require a scalar capability. A revenue-dependent constraint such as equation~\eqref{eq:marketgate} violates the premise, so the invariance result does not apply to it.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:acquisition}]
+The two actions have the same current capability reward. Their future rewards, apart from positive common factor $\beta_A$, are $(1-\rho)J_1$ and $J_0$. Comparing and dividing by $J_1>0$ gives equation~\eqref{eq:acquisitionthreshold}. If acquisition breaches subsistence, successful acquisition causes extinction and containment prevents it, giving probability $1-\rho$. If every feasible action at every reachable living state preserves subsistence, induction yields $D_h=0$ in those states for every horizon. This claim is restricted to the defined resource channel.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:decomp}]
+Partition histories by the disjoint events $\{\tau=t\}$ and autonomous initial states. Conditional on a first-loss date and state, the Markov property and selected autonomous policy give extinction probability $D_{T-t}(z)$. The law of total probability gives equation~\eqref{eq:decomp}. Histories with no loss of control contribute zero. Since $D_h\in[0,1]$, the upper bound is $\sum_t\mu^\pi_t(\mathcal Z)=\Prob_\pi(\tau\leq T)$. Failure and containment can remain random under pure developer strategies, so developer mixing probabilities alone cannot supply extinction probability.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:planner}]
+The planner can implement the same product distribution of actions as any fixed developer equilibrium. At horizon zero their human values agree. At a longer horizon, planner continuation is weakly greater by induction and current maximization includes the equilibrium action distribution. This proves weak aggregate welfare dominance. The coordinated menu contains the unilateral menu; maximizing the same selected continuation objective over it proves the second comparison. Greater surviving benefits can compensate for more risk, and maximizing a sum need not improve every component. Neither risk nor Pareto ordering follows.
+\end{proof}

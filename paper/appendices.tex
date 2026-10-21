@@ -1,0 +1,71 @@
+\section{Additional empirical results}\label{app:empirical}
+\begin{table}[htbp]\centering\small
+\caption{Leaving out one model family at a time}\label{tab:family}
+\input{../output/tables/leave_family.tex}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.5em}
+Notes: Principal ECI matching rules, decisive first-round comparisons, with both sides in retained families. The coefficient multiplies the difference in squared centered ECI. Standard errors cluster by unordered model pair. Family exclusions change capability support and composition.
+\end{minipage}
+\end{table}
+
+The ties robustness assigns half outcomes to ties and drops both-bad responses. It fits a fractional-outcome logit as a descriptive comparison rather than interpreting both-bad responses as indifference between acceptable models. The all-rounds specification admits repeated votes and receives less evidential weight. The GPQA exercise matches explicit benchmark model versions where available; its ECI counterpart uses identical comparisons. ECI and GPQA need not share evaluation budgets.
+
+The crosswalk records unmatched and qualified entries rather than imputing their capability. Standard errors do not resolve mapping uncertainty. Nor does the analysis hold response style, speed, token use, or topic difficulty fixed. Identifying willingness to pay requires monetary choices or price variation with a demand model. Identifying developer profits further requires quantities, inference costs, research costs, financing, and complementary-product revenues.
+
+\section{Numerical assumptions and robustness}\label{app:parameters}
+\begin{longtable}{p{0.23\textwidth}p{0.69\textwidth}}
+\caption{Notation}\label{tab:notation}\\
+\toprule Symbol & Meaning\\\midrule\endfirsthead
+\toprule Symbol & Meaning\\\midrule\endhead
+$i,j$ & Developer and jurisdiction indices.\\
+$T,h$ & Total horizon and periods remaining.\\
+$x,x',z$ & Current and updated controlled states; autonomous state.\\
+$a_i,a$ & Developer and autonomous capability on a specified cardinal scale.\\
+$K_i,F_i$ & Controlled research infrastructure and outside financing capacity.\\
+$g_i,\mathcal G_i$ & Government policy and finite policy menu.\\
+$b_i=(e_i,s_i,d_i)$ & Research, safety, and delegation action.\\
+$R_\sigma,m,\sigma$ & Commercial benefits, their scale, and curvature.\\
+$c_i,k_i,c_0,c_s,\gamma$ & Research and safety cost functions, normalized scales, cost exponent.\\
+$S_i,\theta,v_i,\Gamma$ & Centered contest share, contest power, private and government positional scales.\\
+$\ell_i,L,\chi$ & Private life flow, aggregate baseline human value, commercial surplus capture.\\
+$q_i,q_{12},\omega_j$ & Individual and joint control-failure risks; selected-regime probabilities.\\
+$P,M_j$ & Controlled research kernel and failure-to-autonomy state map.\\
+$\beta,\beta_A$ & Human and autonomous discount factors.\\
+$V_{i,h},Q_{i,h},W_{i,h}$ & Developer value, developer stage payoff, jurisdiction value.\\
+$\pi,\pi^0$ & Development strategies and a restricted no-delegation equilibrium.\\
+$G_s,G_d,Z_d,N,H$ & Supervised/delegated controlled continuation, failure continuation, net delegation gain, private failure loss.\\
+$\bar K,k,k_0,\underline H$ & Total resources, autonomous stock, initial stock, human subsistence stock.\\
+$y,\kappa_y,a_S$ & Acquisition, its resource cost, and capability requirement.\\
+$\rho,u_A,J_h$ & Containment probability, autonomous capability reward, autonomous value.\\
+$g(k),\nu,L_h,N_h$ & Human production index, elasticity, post-loss human value, safe annuity.\\
+$D_h,\tau,\mu^\pi_t$ & Autonomous extinction probability, first-loss date, first-loss state distribution.\\
+$\tau_H,\tau_A$ & Human and autonomous terminal-value coefficients.\\
+$\eta,\alpha,\phi,\psi,B_R,\mu_D$ & Research rate, input elasticity, assistance, difficulty, bottleneck, delegation multiplier.\\
+$E,z_{mb},\delta,\beta_1,\beta_2$ & ECI, centered/scaled score, side effect, empirical preference coefficients.\\
+\bottomrule
+\end{longtable}
+\begin{table}[htbp]\centering\small
+\caption{Principal normalized reference assumptions}
+\input{../output/tables/parameters.tex}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.5em}
+Notes: All values in this table are scenario assumptions. Empirical bridges replace the cost exponent and research rate with \CostSlope\ and \BridgeEta, subject to the explicit mapping restrictions in Section~\ref{sec:evidence}. The complete parameter file specifies resources, budgets, meshes, and thresholds. Control-failure risk is not estimated.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{Sensitivity of the selected open-development equilibrium}\label{tab:sensitivity}
+\resizebox{\textwidth}{!}{\input{../output/tables/sensitivity.tex}}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.5em}
+Notes: Long-horizon sensitivities use twenty-five years, bridge sensitivities ten years. Boundary is the probability of capability clipping at a computational ceiling; the solver expands ceilings until it is below $10^{-9}$. Zero within-horizon risk does not guarantee infinite-horizon safety. Selection sensitivities compare specified equilibria, not the complete correspondence.
+\end{minipage}
+\end{table}
+
+The support solver verifies that supported actions are best responses and excluded actions do not improve payoffs. Linear feasibility programs accommodate unequal supports and degenerate games. Probability recursions are undiscounted; payoff recursions are discounted. Keeping them separate prevents interpreting discounted hazards as extinction probabilities.
+
+The no-delegation certificate is a theoretical characterization. The numerical solver searches unrestricted stage games rather than presuming it holds. Multiple-pure diagnostics count continuation state games, not all complete-game equilibria. Checks cover off-path states because subgame perfection requires optimality there too. Initial-state boundary diagnostics isolate whether a computational limit affects the reported trajectory; expanded-domain and mesh comparisons assess numerical stability separately.
+
+\section{Reproducibility and transparency}
+The repository contains LaTeX, proofs, references, frozen numeric data, a reviewed crosswalk, SHA-256 manifests, Python solvers and estimators, generated figures and tables, and validation outputs. Copyrighted reference-paper PDFs remain in an ignored local cache and are not redistributed. Arena data are attributed under CC-BY-4.0; Epoch and benchmark sources retain their original attribution and licensing terms.
+
+The command \texttt{python replication/run.py} verifies frozen inputs, runs behavioral and accounting checks, reproduces estimates and scenarios, writes manuscript tables, compiles the paper, and renders visual-inspection copies. Normal replication uses frozen data rather than querying a changing leaderboard.
+
+This working paper was developed with substantial AI assistance in formalization, programming, literature checking, and writing. One external ChatGPT referee pass is requested for this frozen draft; its completed report and a point-by-point response will accompany the revision. That review is an additional consistency check, not independent academic peer review. Mathematical claims and computational limitations remain open to human scrutiny.

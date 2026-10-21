@@ -38,6 +38,7 @@ class Params:
     bottleneck: float = 20
     launch_capability: float = 2
     q0: float = .03
+    loss_correlation: float = 0
     safety_effect: float = 2
     infrastructure: tuple = (1.5, 1.5)
     resource_total: int = 6
@@ -92,9 +93,25 @@ def supports(n):
     return [s for k in range(1, n+1) for s in combinations(range(n), k)]
 
 
-def equilibria(A, B, tol=1e-8):
+def equilibria(A, B, tol=1e-8, fast=False):
     """One representative per feasible support; LP also handles unequal supports."""
     out = []
+    if fast:
+        for size in range(2,min(A.shape)+1):
+            for I in combinations(range(A.shape[0]),size):
+                for J in combinations(range(A.shape[1]),size):
+                    def balanced(C,own,other):
+                        sub=C[np.ix_(own,other)]
+                        system=np.block([[sub,-np.ones((size,1))],[np.ones((1,size)),np.zeros((1,1))]])
+                        try: sol=np.linalg.solve(system,np.r_[np.zeros(size),1.])[:size]
+                        except np.linalg.LinAlgError: return None
+                        return sol if np.min(sol)>1e-10 else None
+                    q=balanced(A,I,J);r=balanced(B.T,J,I)
+                    if q is None or r is None:continue
+                    x,y=np.zeros(A.shape[0]),np.zeros(A.shape[1])
+                    x[list(I)]=r;y[list(J)]=q
+                    if exploitability(A,B,x,y)<=1e-6:out.append((x,y))
+            if out:return out
     for I in supports(A.shape[0]):
         for J in supports(A.shape[1]):
             def opponent(C, own, other):
@@ -197,7 +214,7 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
     welfare = [p.social_life/2+R[:,None]/p.capture_share+p.government_prize*share,
                p.social_life/2+R[None,:]/p.capture_share-p.government_prize*share]
     # Quantities: private V1,V2; jurisdiction W1,W2; doom; escape; boundary.
-    prev = np.stack([p.terminal_years*x for x in private+welfare]+[np.zeros((n,n))]*3)
+    prev = np.stack([p.terminal_years*x for x in private+welfare]+[np.zeros((n,n))]*5)
     maps,costs,allowed,qs=[],[],[],[]
     root_policies = None
     for i,policy in enumerate(policies):
@@ -219,7 +236,7 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
     stats = {"multiple_pure_state_games":0,"mixed_state_games":0,"max_deviation_gain":0.,"state_games":0}
     initial_actions=[]
     for h in range(1,p.horizon+1):
-        Q = np.zeros((7,n,n,na,na))
+        Q = np.zeros((9,n,n,na,na))
         for u in range(na):
             li,hi,wi=maps[0][u]
             for v in range(na):
@@ -229,13 +246,17 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
                           +prev[:,li[:,None],hj[None,:]]*(1-wi[:,None])*wj[None,:]
                           +prev[:,hi[:,None],hj[None,:]]*wi[:,None]*wj[None,:])
                 q1,q2=qs[0][u],qs[1][v]
-                none=(1-q1)*(1-q2); f1=q1*(1-q2/2); f2=q2*(1-q1/2)
+                overlap=(1-p.loss_correlation)*q1*q2+p.loss_correlation*min(q1,q2)
+                none=1-q1-q2+overlap; f1=q1-overlap/2; f2=q2-overlap/2
                 assert abs(none+f1+f2-1)<1e-12
                 r1map=interpolation(rogue["grid"],grid+gain(grid,float(u!=0),p,u>=2))
                 r2map=interpolation(rogue["grid"],grid+gain(grid,float(v!=0),p,v>=2))
                 mix_life=f1*interp(rogue["life"][h-1,:,p.resource_initial],r1map)[:,None]+f2*interp(rogue["life"][h-1,:,p.resource_initial],r2map)[None,:]
                 mix_doom=f1*interp(rogue["doom"][h-1,:,p.resource_initial],r1map)[:,None]+f2*interp(rogue["doom"][h-1,:,p.resource_initial],r2map)[None,:]
-                mix_boundary=f1*interp(rogue["boundary"][h-1,:,p.resource_initial],r1map)[:,None]+f2*interp(rogue["boundary"][h-1,:,p.resource_initial],r2map)[None,:]
+                rtarget1=grid+gain(grid,float(u!=0),p,u>=2)
+                rtarget2=grid+gain(grid,float(v!=0),p,v>=2)
+                mix_boundary=(f1*np.maximum(rtarget1>rogue['grid'][-1]+1e-9,interp(rogue["boundary"][h-1,:,p.resource_initial],r1map))[:,None]
+                              +f2*np.maximum(rtarget2>rogue['grid'][-1]+1e-9,interp(rogue["boundary"][h-1,:,p.resource_initial],r2map))[None,:])
                 for j in range(2):
                     c=costs[j][u if j==0 else v]
                     c=c[:,None] if j==0 else c[None,:]
@@ -247,9 +268,11 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
                 target2=grid+gain(grid,float(v!=0),p,v>=2)
                 hit=(target1[:,None]>grid[-1]+1e-9)|(target2[None,:]>grid[-1]+1e-9)
                 Q[6,:,:,u,v]=none*np.maximum(expected[6],hit)+mix_boundary
+                Q[7,:,:,u,v]=int(u!=0)+int(v!=0)+none*expected[7]
+                Q[8,:,:,u,v]=int(u>=2)+int(v>=2)+none*expected[8]
         mask=np.array(allowed[0]).T[:,None,:,None]&np.array(allowed[1]).T[None,:,None,:]
         A=np.where(mask,Q[0],-1e12);B=np.where(mask,Q[1],-1e12)
-        current=np.zeros((7,n,n)); joints=np.zeros((n,n,na,na))
+        current=np.zeros((9,n,n)); joints=np.zeros((n,n,na,na))
         if planner:
             score=np.where(mask,Q[2]+Q[3],-np.inf)
             index=score.reshape(n,n,-1).argmax(axis=-1)
@@ -269,7 +292,7 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
             for i,j in zip(*np.where(counts==0)):
                 valid_i=np.where(np.array(allowed[0])[:,i])[0]
                 valid_j=np.where(np.array(allowed[1])[:,j])[0]
-                equilibria_here=equilibria(A[i,j][np.ix_(valid_i,valid_j)],B[i,j][np.ix_(valid_i,valid_j)])
+                equilibria_here=equilibria(A[i,j][np.ix_(valid_i,valid_j)],B[i,j][np.ix_(valid_i,valid_j)],fast=True)
                 def rank(eq):
                     x,y=eq
                     return float(x@risk[i,j][np.ix_(valid_i,valid_j)]@y)
@@ -290,6 +313,7 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
     result={"policies":list(policies),"planner":planner,"V1":float(prev[0,0,0]),"V2":float(prev[1,0,0]),
             "W1":float(prev[2,0,0]),"W2":float(prev[3,0,0]),"doom":float(prev[4,0,0]),
             "escape":float(prev[5,0,0]),"boundary_probability":float(prev[6,0,0]),
+            "research_cycles":float(prev[7,0,0]),"delegated_cycles":float(prev[8,0,0]),
             "initial_action_joint":root_policies.tolist(),"diagnostics":stats}
     result["welfare"]=result["W1"]+result["W2"]
     result["doom_given_escape"]=result["doom"]/result["escape"] if result["escape"]>1e-12 else None
@@ -299,9 +323,21 @@ def solve(p, policies=("open","open"), planner=False, rogue=None):
 
 def policy_game(p):
     rogue=autonomous(p)
-    cases={f"{x}/{y}":solve(p,(x,y),rogue=rogue) for x in POLICIES for y in POLICIES}
+    cases={f"{x}/{y}":solve_verified_domain(p,(x,y),rogue=rogue) for x in POLICIES for y in POLICIES}
     A=np.array([[cases[f"{x}/{y}"]["W1"] for y in POLICIES] for x in POLICIES])
     B=np.array([[cases[f"{x}/{y}"]["W2"] for y in POLICIES] for x in POLICIES])
     eqs=equilibria(A,B)
     return {"cases":cases,"government_equilibria":[{"p1":x.tolist(),"p2":y.tolist(),"deviation":exploitability(A,B,x,y)} for x,y in eqs],
-            "coordinated":max(cases,key=lambda k:cases[k]["welfare"]),"planner":solve(p,planner=True,rogue=rogue)}
+            "coordinated":max(cases,key=lambda k:cases[k]["welfare"]),"planner":solve_verified_domain(p,planner=True,rogue=rogue)}
+
+
+def solve_verified_domain(p,policies=("open","open"),planner=False,rogue=None):
+    """Expand computational ceilings until clipping is negligible at the initial state."""
+    for attempt in range(5):
+        r=solve(p,policies,planner,rogue)
+        if r['boundary_probability']<1e-9:
+            r.update(grid_expansions=attempt,capability_ceiling=p.capability_max,ai_ceiling=p.ai_max)
+            return r
+        p=replace(p,capability_max=2*p.capability_max,ai_max=2*p.ai_max)
+        rogue=None
+    raise ArithmeticError('Could not remove economically relevant capability clipping')

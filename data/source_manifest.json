@@ -1,0 +1,72 @@
+{
+  "growiec_prettner": {
+    "url": "https://arxiv.org/pdf/2503.07341",
+    "path": ".cache\\literature\\growiec_prettner.pdf",
+    "sha256": "e9201f109313eaa66216658d84387b00b88a2306ad2e1d172d9133c395f42074",
+    "bytes": 778632,
+    "retrieved": "2026-10-21"
+  },
+  "jones": {
+    "url": "https://web.stanford.edu/~chadj/existentialrisk.pdf",
+    "path": ".cache\\literature\\jones.pdf",
+    "sha256": "4bb12e8afa95bdadb37fc90af5d9adfd100e690bc2744018454ebf7559413a7b",
+    "bytes": 790126,
+    "retrieved": "2026-10-21"
+  },
+  "race": {
+    "url": "https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/c/1708/files/2026/05/agi_race_post.pdf",
+    "path": ".cache\\literature\\race.pdf",
+    "sha256": "31cece05939d76bfd188abcae8d4f4e2c5d0008c933c8f32b5cb119baa2e2b63",
+    "bytes": 652266,
+    "retrieved": "2026-10-21"
+  },
+  "rsi": {
+    "url": "https://raw.githubusercontent.com/elasticity-ai/elasticity/main/paper/elasticity-rsi-paper.pdf",
+    "path": ".cache\\literature\\rsi.pdf",
+    "sha256": "4ba9f2baa812bd1142ee14b11c2b6f19c423b5092b82b483f18037a6985ca6cf",
+    "bytes": 275385,
+    "retrieved": "2026-10-21"
+  },
+  "armstrong": {
+    "url": "https://nickbostrom.com/papers/racing-to-the-precipice.pdf",
+    "path": ".cache\\literature\\armstrong.pdf",
+    "sha256": "7107ba4d2245ed5c6522fb061ea118e7b5e0af64c3de1b10b57980b6f0a18e2e",
+    "bytes": 707137,
+    "retrieved": "2026-10-21"
+  },
+  "epoch_models": {
+    "url": "https://epoch.ai/data/all_ai_models.csv",
+    "path": "data\\raw\\epoch_models.csv",
+    "sha256": "271051c653d9a602afe4c96c4da83afb5a783095a416a984a5b76109be990aaf",
+    "bytes": 6827618,
+    "retrieved": "2026-10-21"
+  },
+  "hf_meta": {
+    "url": "https://huggingface.co/api/datasets/lmarena-ai/arena-human-preference-140k/tree/main?recursive=true",
+    "path": ".cache\\arena_tree.json",
+    "sha256": "ef1a96d778088de6779c7580c0123ed043e494bd2200b330b6b4666279c82139",
+    "bytes": 2517,
+    "retrieved": "2026-10-21"
+  },
+  "epoch_eci_page": {
+    "url": "https://epoch.ai/eci",
+    "path": ".cache\\eci.html",
+    "sha256": "102e7c100b6a5ac32295271b895565aaeee720af65f76b4c923efb04c0df6f39",
+    "bytes": 222933,
+    "retrieved": "2026-10-21"
+  },
+  "training_repo": {
+    "url": "https://api.github.com/repos/epoch-research/training-cost-trends/git/trees/main?recursive=1",
+    "path": ".cache\\training_tree.json",
+    "sha256": "18e90abb6bc33d6b723b9b118ff51731c34590d068753b21cab4699690947555",
+    "bytes": 6394,
+    "retrieved": "2026-10-21"
+  },
+  "rsi_arxiv": {
+    "url": "https://arxiv.org/pdf/2609.15802v1",
+    "path": ".cache\\literature\\rsi_arxiv.pdf",
+    "sha256": "bbcb1659ca4635bf985b02a679b058cf3b09e169b83f2af4172cd7481d4335d3",
+    "bytes": 694940,
+    "retrieved": "2026-10-21"
+  }
+}

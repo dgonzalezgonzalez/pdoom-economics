@@ -1,0 +1,262 @@
+All equilibrium, mortality, resource, probability, planner and counterexample checks passed.
+{
+  "sample": {
+    "raw": 135634,
+    "first_round": 108315,
+    "raw_models": 53,
+    "primary_matched_models": 32,
+    "first_date": "2025-04-17 00:20:51.563409",
+    "last_date": "2025-07-24 23:59:41.255781"
+  },
+  "primary": {
+    "n": 27471,
+    "models": 32,
+    "clusters": 441,
+    "coef": [
+      -0.00859398777094832,
+      0.4192943150367462,
+      -0.10057054230614258
+    ],
+    "se": [
+      0.012950204049724242,
+      0.053092528554682716,
+      0.05705763780729389
+    ],
+    "metric": "eci",
+    "ties": false,
+    "quadratic": true,
+    "log_likelihood": -18533.99959556014,
+    "score_per_observation": 4.50211951588708e-12
+  },
+  "cost": {
+    "n": 18,
+    "log_cost_per_10_eci": 1.8538057252538604,
+    "se_hc1": 0.13836395051980316,
+    "with_year": 1.861095646841405,
+    "with_year_se": 0.28395321266109935,
+    "median_cost_usd2023": 5146322.061691513
+  },
+  "calibration": {
+    "eci_frontier_2026": 168.83,
+    "eci_frontier_2025": 150.59,
+    "eci_points_per_year": 18.24000000000001,
+    "eta_matching_one_year_frontier": 5.456425090672222,
+    "cost_exponent_log_capability": 1.8538057252538604,
+    "capability_mapping": "a = exp((ECI-ECI_reference)/10)",
+    "warning": "Descriptive cross-sectional bridges, not causal or future technology estimates."
+  }
+}
+5 years 0.0 0.044241 boundary 0.0
+25 years 0.043585 0.045761 boundary 0.0
+25 years, no acquisition 0.0 0.050498 boundary 0.0
+25 years, full common loss shock 0.025937 0.027191 boundary 0.0
+25 years, high-risk pure selection 0.045813 0.047999 boundary 0.0
+25 years, half capability mesh 0.04353 0.045614 boundary 0.0
+25 years, double capability ceiling 0.043585 0.04576 boundary 0.0
+25 years, zero terminal values 0.040255 0.042431 boundary 0.0
+25 years, long terminal values 0.041078 0.056463 boundary 0.0
+25 years, no containment 0.045742 0.045742 boundary 0.0
+25 years, no positional prize 0.030005 0.032105 boundary 0.0
+25 years, low research feedback 0.038711 0.043567 boundary 0.0
+25 years, high research feedback 0.036922 0.037855 boundary 0.0
+bridge, half cost slope 0.0 0.008104 boundary 0.0
+bridge, double finance 0.0 0.0 boundary 0.0
+bridge, ready to delegate 0.0 0.008104 boundary 0.0
+bridge, higher market scale 0.0 0.0 boundary 0.0
+curvature sweep -1.0
+curvature sweep 0.0
+curvature sweep 0.5
+curvature sweep 1.0
+curvature sweep 1.3
+curvature sweep 2.0
+curvature sweep 3.0
+Scenario results saved.
+{
+  "data": [
+    {
+      "source": "epoch_models",
+      "sha256": "271051c653d9a602afe4c96c4da83afb5a783095a416a984a5b76109be990aaf",
+      "bytes": 6827618
+    },
+    {
+      "source": "arena",
+      "sha256": "19b3bb640d8cbac74a6c1cf00898318d459ab3f6578d5ee630c9a1b2e428fffb",
+      "bytes": 1771293
+    },
+    {
+      "source": "eci",
+      "sha256": "540796e67e6158f290edfb97a2633ca871edf9f1a89c78fc9d06cd20ca33cf64",
+      "bytes": 33260
+    },
+    {
+      "source": "edi",
+      "sha256": "cce0f3c05598d0ff80b5f9c55c20f6462fa95b90b7c3f5765fbfe46e32a77bea",
+      "bytes": 4135
+    },
+    {
+      "source": "benchmark_scores",
+      "sha256": "d27bba54271bfa17f13083f2c947a01c24e0e15ceaa4d226cf83da7f992f8800",
+      "bytes": 2356341
+    }
+  ],
+  "environment": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "pyarrow": "23.0.1",
+    "PyMuPDF": "1.28.2"
+  },
+  "model_checks": "passed",
+  "pdf": {
+    "pages": 24,
+    "page_details": [
+      {
+        "page": 1,
+        "characters": 1687,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 2,
+        "characters": 3583,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 3,
+        "characters": 3319,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 4,
+        "characters": 2158,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 5,
+        "characters": 2583,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 6,
+        "characters": 2513,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 7,
+        "characters": 2381,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 8,
+        "characters": 2321,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 9,
+        "characters": 2332,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 10,
+        "characters": 2484,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 11,
+        "characters": 3038,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 12,
+        "characters": 2761,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 13,
+        "characters": 2534,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 14,
+        "characters": 2741,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 15,
+        "characters": 2958,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 16,
+        "characters": 2926,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 17,
+        "characters": 2367,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 18,
+        "characters": 3040,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 19,
+        "characters": 3280,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 20,
+        "characters": 2770,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 21,
+        "characters": 2115,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 22,
+        "characters": 2321,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 23,
+        "characters": 2446,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 24,
+        "characters": 1590,
+        "width": 612.0,
+        "height": 792.0
+      }
+    ],
+    "overfull_boxes": 0
+  },
+  "seconds": 111.71
+}

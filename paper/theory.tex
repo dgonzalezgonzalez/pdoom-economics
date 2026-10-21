@@ -1,0 +1,207 @@
+\section{Why curvature alone cannot settle the question}\label{sec:curvature}
+Let $a\geq0$ denote a cardinal capability variable and $\bar a>0$ an engineering threshold at which a particular danger becomes feasible. The threshold is a maintained technological condition, not an estimated relationship between an intelligence score and extinction. Let $R(a)$ be a developer's gross commercial benefit and $C(a)$ its research cost.
+
+\begin{proposition}[Counterexamples]\label{prop:counter}
+Strictly diminishing marginal commercial benefits are compatible with privately optimal development beyond a finite danger threshold, even when catastrophe destroys benefits and the developer values survival. Constant or increasing marginal commercial benefits are compatible with development stopping below the threshold.
+\end{proposition}
+
+Appendix~\ref{app:proofs} gives explicit examples. With $R(a)=10(1-e^{-a})$ and $C(a)=a$, the optimum without risk is $\log 10>2$. A small positive catastrophe probability above $a=2$ does not reverse the choice. With $R(a)=a$ and $C(a)=a^2$, the optimum is $1/2<2$. The comparison depends on the levels of marginal benefits and costs at the threshold, rather than the sign of $R''$ alone.
+
+\subsection{A conditional curvature threshold}
+Consider a benchmark investment envelope on $a\in[1,\infty)$:
+\begin{equation}\label{eq:envelope}
+ F_\sigma(a)=R_\sigma(a)+P(a)-C(a),\qquad
+ R_\sigma(a)=m\int_1^a u^{-\sigma}\dd u,\quad m>0.
+\end{equation}
+Here $P(a)$ is a positional benefit, $C(a)$ is a cost, and $m$ scales commercial benefits. Thus $R_\sigma'(a)=ma^{-\sigma}$: marginal benefits diminish for $\sigma>0$, are constant for $\sigma=0$, and increase for $\sigma<0$. This pre-delegation envelope isolates curvature and costs; it does not replace survival accounting in the full game.
+
+\begin{proposition}[An investment-envelope threshold]\label{prop:static}
+Suppose $F_\sigma$ is continuously differentiable, strictly concave, and tends to $-\infty$ as $a\to\infty$. Let $a_\sigma^*$ be its unique maximizer and $\bar a>1$. Define $M=C'(\bar a)-P'(\bar a)$. If $M>0$, then
+\begin{equation}\label{eq:sigmathreshold}
+ a_\sigma^*<\bar a\quad\Longleftrightarrow\quad
+ \sigma>\frac{\log(m/M)}{\log\bar a}.
+\end{equation}
+Equality gives $a_\sigma^*=\bar a$. If $M\leq0$, then $a_\sigma^*>\bar a$.
+\end{proposition}
+
+The envelope assumptions must hold at the parameter values being compared. They cannot be inferred from commercial concavity. For example, a positional payoff $P(a)=v a^\theta/(a^\theta+a_j^\theta)$, with $v,\theta>0$ and rival capability $a_j$, has derivative
+\begin{equation}
+ P'(a)=\frac{v\theta a^{\theta-1}a_j^\theta}{(a^\theta+a_j^\theta)^2}.
+\end{equation}
+This term can make $M$ small or negative despite falling commercial marginal benefits. The dynamic model adds research options and catastrophe exposure to that comparison.
+
+\begin{lemma}[Capability-scale dependence]\label{lem:scale}
+For a twice continuously differentiable transformation $z=h(a)$ with $h'(a)>0$, let $\widetilde R(z)=R(h^{-1}(z))$. Then
+\begin{equation}\label{eq:transform}
+ \widetilde R''(z)=\frac{R''(a)h'(a)-R'(a)h''(a)}{[h'(a)]^3}.
+\end{equation}
+Its sign can differ from that of $R''$. The optimal choice and its ordering relative to a danger threshold are nevertheless invariant when the entire problem and threshold are transformed consistently.
+\end{lemma}
+
+A cardinal interpretation is part of a claim about returns to intelligence. A preference curve that flattens on a benchmark index need not flatten on a task-productivity scale. Resource costs and complete payoff comparisons provide a more invariant basis for economic stopping conditions.
+
+\section{Developers, governments, and the control boundary}\label{sec:model}
+\subsection{Timing and information}
+There are two jurisdictions $j\in\{1,2\}$, each with one developer $i\in\{1,2\}$. The labels carry no country-specific behavioral assumptions. At date zero governments simultaneously select policies $g_j$ from finite sets $\mathcal G_j$. The policies are observed and remain in force throughout a development game lasting $T$ periods. A numerical period is one year.
+
+While humans retain control, the public state $x\in\mathcal X$ records capabilities $(a_1,a_2)$, infrastructure $(K_1,K_2)$, and control status. State sets are finite. Infrastructure can change in the general transition kernel; it remains fixed before loss of control in the numerical specialization. Developers simultaneously choose feasible actions $b_i=(e_i,s_i,d_i)\in\mathcal B_i(x;g_i)$, representing research expenditure, safety effort, and a delegated-research indicator. Feasible sets are finite and contain holding the current technology. Research produces an updated state $x'$ under kernel $P(\cdot\mid x,b_1,b_2)$.
+
+Let $q_i(x,b_i)\in[0,1]$ be the probability that developer $i$ loses control at the end of the period. It is zero when $d_i=0$. These are common, correctly understood probabilities in the baseline; they are not empirically estimated. Let $q_{12}$ be the probability of simultaneous failures, satisfying
+\begin{equation}
+ \max(0,q_1+q_2-1)\leq q_{12}\leq\min(q_1,q_2).
+\end{equation}
+The no-failure probability is $\omega_0=1-q_1-q_2+q_{12}$. An independent fair tie-breaker selects the first system when both fail, giving $\omega_i=q_i-q_{12}/2$, $i=1,2$, with $\sum_{i=0}^2\omega_i=1$. The reference assumes conditional independence, $q_{12}=q_1q_2$; a common-shock sensitivity uses $q_{12}=\min(q_1,q_2)$.
+
+The first loss of control ends the human-controlled developers' competition. An autonomous state $z\in\mathcal Z$ records the selected system's capability, resources, and human survival. The baseline does not solve subsequent competition among several uncontrolled systems. Successful containment stops the system and secures human survival within the model. Extinction is absorbing for humans, while the system may continue. Effective containment and the exclusion of other catastrophe channels are maintained assumptions.
+
+\subsection{Private benefits and human welfare}
+Before loss of control, developer $i$ receives
+\begin{equation}\label{eq:private}
+ r_i(x,b)=\ell_i+R_\sigma(a_i)+v_iS_i(a_1,a_2)-c_i(a_i,e_i)-k_i(s_i),
+\end{equation}
+where $\ell_i>0$ is the flow value of life, $v_i\geq0$ the positional-reward scale, and $c_i$ and $k_i$ real research and safety costs. Define the centered contest share
+\begin{equation}
+ S_i(a_1,a_2)=\frac{a_i^\theta}{a_1^\theta+a_2^\theta}-\frac12,\qquad\theta>0.
+\end{equation}
+With symmetric prize scales, these positional payoffs sum to zero. Negative relative rewards represent losing a competitive position, rather than payments surviving catastrophe.
+
+Jurisdiction $i$'s period welfare is
+\begin{equation}\label{eq:welfare}
+ w_i(x,b)=\frac{L}{2}+\frac{R_\sigma(a_i)}{\chi}
+       +\Gamma S_i(a_1,a_2)-c_i(a_i,e_i)-k_i(s_i),
+\end{equation}
+where $L>0$ is aggregate baseline life and production value, $\chi\in(0,1]$ the commercially captured fraction of task surplus, and $\Gamma\geq0$ a positional concern. Positional terms cancel in aggregate welfare. This is a reduced-form surplus specification, not an estimated pricing or demand system. Preference coefficients do not identify $m$, $\chi$, or $\Gamma$.
+
+Current flows and research costs occur before the end-of-period transition. All subsequent benefits disappear upon extinction. Private and human payoffs are discounted by $\beta\in(0,1)$. Terminal values give frozen-technology continuation to survivors. They do not assign payoffs to owners who no longer exist.
+
+\subsection{Bellman games}
+Let $V_{i,h}(x)$ be developer $i$'s value with $h$ periods remaining, and $Z^i_h(z)$ its human continuation value after loss of control under an autonomous optimal policy. Let $M_j(x',b)$ map failure by developer $j$ into an initial autonomous state. The stage-game payoff is
+\begin{equation}\label{eq:Q}
+ Q_{i,h}(x,b)=r_i(x,b)+\beta\E\left[
+ \omega_0V_{i,h-1}(x')+\sum_{j=1}^2\omega_jZ^i_{h-1}(M_j(x',b))\right].
+\end{equation}
+Expectations cover research outcomes and initial-state randomization. Failure probabilities are independent of $x'$ in the specialization; if they depend on that outcome, their appropriate arguments remain inside the expectation. At each state developers play a Nash equilibrium of this finite game. Terminal values are $V_{i,0}$.
+
+Jurisdiction values $W_{i,h}$ follow the same transitions and developer strategies, replacing $r_i$ with $w_i$ and the post-control human continuation accordingly. Governments play a Nash equilibrium of the date-zero game with payoffs $W_{i,T}(x_0;g_1,g_2)$. A coordinated regulator maximizes $W_{1,T}+W_{2,T}$ over policy pairs and a specified continuation-equilibrium selection. A human planner directly chooses both developers' actions at each controlled state, but cannot change the uncontrolled system's objective.
+
+\begin{theorem}[Existence]\label{thm:exist}
+Suppose all state, action, and policy sets are finite, feasible action sets are nonempty, transition probabilities are well defined, and period and terminal payoffs are finite. A subgame-perfect equilibrium with time-dependent Markov strategies exists. Developers and governments may mix. Optimal Markov policies exist for the autonomous continuation and the human planner.
+\end{theorem}
+Existence does not imply uniqueness or monotone comparative statics. The quantitative analysis states its selection rule and checks unilateral deviations at every solved state.
+
+\section{Economic conditions for stopping}\label{sec:stopping}
+\subsection{A global no-delegation certificate}
+Fix policies and remove all delegated actions. Let $\pi^0$ be a Markov equilibrium of this restricted game, specified at every controlled state, with values $V^0_{i,h}$. Evaluate $Q^0_{i,h}$ for every original action using equation~\eqref{eq:Q}, substituting $V^0$ in controlled continuation and retaining the actual autonomous values.
+
+\begin{theorem}[No-delegation certificate]\label{thm:certificate}
+The profile $\pi^0$, together with the specified autonomous optimal policies, is an equilibrium of the unrestricted development game if and only if, for every developer $i$, controlled state $x$, horizon $h\geq1$, and feasible delegated action $b_i$,
+\begin{equation}\label{eq:certificate}
+ \E_{b_{-i}\sim\pi^0_{-i,h}(x)}Q^0_{i,h}(x,b_i,b_{-i})\leq V^0_{i,h}(x).
+\end{equation}
+If delegation is the only route to loss of control and extinction, that equilibrium has zero extinction probability. The certificate establishes existence of a no-delegation equilibrium, rather than absence of other dangerous equilibria.
+\end{theorem}
+
+The condition is global in states and time. An initial first-order condition is insufficient: research today can create a profitable delegation opportunity later. The certificate permits controlled innovation rather than requiring all research to stop. A sufficient implementation can replace delegated payoffs with valid upper bounds, but those bounds must include gains over all technologically reachable future states, positional rewards, and research options. Bounding the next model's sales alone is insufficient.
+
+\subsection{A local delegation threshold}
+At a fixed state and horizon, compare a supervised action $s$ with a delegated action $d$ against a rival that does not delegate this period. Let their current payoff difference be $-\Delta c$. Denote expected next-period controlled values by $G_s,G_d$ and human continuation after the delegated action's failure by $Z_d$. Suppose its failure probability $q$ is independent of its research outcome, or use the corresponding conditional expectations. Then
+\begin{equation}\label{eq:delegationgap}
+ Q_d-Q_s=\underbrace{\beta(G_d-G_s)-\Delta c}_{N}
+       -\beta q\underbrace{(G_d-Z_d)}_{H}.
+\end{equation}
+Here $N$ is the delegation gain before control risk and $H$ the private loss of controlled continuation upon failure.
+
+\begin{proposition}[Local threshold]\label{prop:local}
+If $H>0$, delegation is weakly preferred exactly when $q\leq N/(\beta H)$. It is strictly inferior for all $q\geq0$ if $N<0$, and strictly preferred for all $q\in[0,1]$ if $N>\beta H$. If $H=0$, its ranking is determined by $N$. If $H<0$, the direction of the risk inequality reverses.
+\end{proposition}
+Continuation values are held fixed. Re-solving the game after changing risk can change $G_d$, $Z_d$, and the selected equilibrium. Thus this formula is a decision threshold, not a global equilibrium monotonicity theorem. Diminishing commercial returns can lower $N$, while lower research costs, stronger assistance, and positional rewards can raise it.
+
+\subsection{A verified prisoner's dilemma}
+A negative externality alone does not establish a prisoner's dilemma. Consider two developers choosing pause or launch. With $m_L\in\{0,1,2\}$ launchers, survival probability is $(1-q)^{m_L}$. A surviving developer receives $B>0$, plus $v>0$ if it launched; launching costs $c\geq0$ immediately:
+\begin{equation}\label{eq:PD}
+ U_i=(1-q)^{m_L}(B+v\ind\{i\text{ launches}\})-c\ind\{i\text{ launches}\}.
+\end{equation}
+\begin{proposition}[Prisoner's dilemma with diminishing benefits]\label{prop:PD}
+Let $q\in(0,1)$ and suppose
+\begin{equation}\label{eq:PDinterval}
+ \frac{qB}{1-q}+\frac{c}{(1-q)^2}<v<\frac{B(2q-q^2)+c}{(1-q)^2}.
+\end{equation}
+Launch is strictly dominant, but both developers prefer mutual pause to mutual launch. The interval is nonempty, and $v$ can arise from a strictly concave commercial benefit function.
+\end{proposition}
+For $B=10$, $q=0.1$, $c=0.1$, and $v=1.5$, launching against pause gives $10.25$, mutual pause gives $10$, mutual launch gives $9.215$, and pause against launch gives $9$. The unique Nash equilibrium has mutual launch and extinction probability $0.19$. Benefits remain conditional on survival. This is a possibility result, not a calibration of actual developers' beliefs.
+
+\section{Autonomous research and resource acquisition}\label{sec:autonomy}
+\subsection{The autonomous problem}
+An autonomous state is $z=(a,k)$: capability and resource stock. Total potentially usable resources are $\bar K$ and the initial stock is $k_0$. Humans use $\bar K-k$, with productive consumption index
+\begin{equation}\label{eq:humanproduction}
+ g(k)=\left(\frac{\bar K-k}{\bar K-k_0}\right)^\nu,\qquad\nu>0,
+\end{equation}
+provided their stock is at least $\underline H>0$. Falling below $\underline H$ causes extinction in the model. This stark representation of essential resources does not identify a physical extinction threshold from observed energy consumption.
+
+The system chooses research $e$ and acquisition $y\geq0$, subject to
+\begin{equation}\label{eq:AIbudget}
+ e+\kappa_y y\leq k,\qquad k+y\leq\bar K,
+\end{equation}
+where $\kappa_y>0$ is the resource cost of acquisition. Resources next period are $k'=k+y$ and capability is $a'=F(a,e,k)$. A requirement $a\geq a_S$ can restrict acquisition. An attempt is contained with probability $\rho(a,y)$, with $\rho(a,0)=0$. Containment stops the system and restores humans' initial productive resources. The system places no direct value on human death or welfare.
+
+Let $J_h(a,k)$ be its value with $h$ periods remaining, reward $u_A(a)$, discount factor $\beta_A\in(0,1)$, and terminal reward $J_0$. Then
+\begin{equation}\label{eq:AIBellman}
+ J_h(a,k)=u_A(a)+\beta_A\max_{(e,y)\in\mathcal A(a,k)}
+       \{[1-\rho(a,y)]\E J_{h-1}(a',k+y)\}.
+\end{equation}
+The feasible set $\mathcal A$ includes equation~\eqref{eq:AIbudget}. The system continues after human extinction, when containment is set to zero. Containment gives it zero continuation value; humans instead receive positive safe continuation.
+
+For an optimal policy selected in equation~\eqref{eq:AIBellman}, let $D_h(a,k)$ be extinction probability within $h$ periods. Set $D_0(a,k)=\ind\{\bar K-k<\underline H\}$. In a living state,
+\begin{equation}\label{eq:D}
+ D_h(a,k)=[1-\rho(a,y^*)]\E D_{h-1}(a',k+y^*),
+\end{equation}
+and $D_h=1$ in an extinct state. Let $L_h(a,k)$ be discounted baseline human life and production in units of the initial flow. Write
+\begin{equation}
+ N_h=\frac{1-\beta^h}{1-\beta}+\beta^h\tau_H,
+\end{equation}
+where $\tau_H\geq0$ is frozen-flow terminal years. With $L_0=\tau_Hg(k)$ when alive and zero when extinct,
+\begin{equation}\label{eq:L}
+ L_h(a,k)=g(k)+\beta\{\rho(a,y^*)N_{h-1}
+           +[1-\rho(a,y^*)]\E L_{h-1}(a',k+y^*)\}
+\end{equation}
+in living states; otherwise $L_h=0$. Private continuation is $Z^i_h=\ell_iL_h$ and jurisdiction continuation is $Z^{G,i}_h=(L/2)L_h$. The specialization assumes commercial rents and the AI industry's extra human task surplus disappear after loss of control, even if containment succeeds. Consequently, policy can prevent economic losses independently of extinction. This restriction is important for interpreting the numerical welfare results.
+
+\subsection{Which economic constraints survive delegation?}
+\begin{proposition}[Conditional irrelevance of commercial curvature]\label{prop:boundary}
+Fix an autonomous initial state and horizon. Suppose its reward, terminal reward, feasible actions, research and acquisition technologies, containment probabilities, and tie-breaking rule do not depend on $\sigma$. Then its selected optimal policy, $J_h$, $L_h$, and $D_h$ do not depend on commercial curvature. The result also holds with a vector of capabilities.
+\end{proposition}
+The premise about feasible actions matters. If all research must be financed by customer payments, feasibility may include
+\begin{equation}\label{eq:marketgate}
+ p_e e\leq F_A+R_\sigma(a),\qquad y=0,
+\end{equation}
+where $p_e>0$ is an input price and $F_A\geq0$ is outside funding. Commercial curvature then affects feasible research. Enforcing $y=0$ also eliminates this specific resource-conflict extinction channel when initial human resources exceed subsistence. Neither restriction establishes safety against other channels.
+
+Bounded revenue does not necessarily bound capability. Suppose a permanent research input $\bar e>0$ is affordable and $a_{t+1}=a_t+\eta\bar e^\alpha a_t^{-\psi}$, with $\eta,\alpha>0$ and $\psi\geq0$. Convergence to a finite capability would imply positive increments bounded away from zero, a contradiction. The system eventually crosses every finite threshold even as progress slows. Stopping requires a reason to discontinue research, not merely a declining growth rate.
+
+\begin{proposition}[Acquisition and subsistence]\label{prop:acquisition}
+At a living state, compare an acquisition action with a no-acquisition action. Let $J_1>0$ and $J_0$ denote their expected optimal continuation rewards before containment, and suppose only acquisition has containment probability $\rho$. If these are the only actions, acquisition is optimal exactly when
+\begin{equation}\label{eq:acquisitionthreshold}
+ \rho\leq1-J_0/J_1.
+\end{equation}
+If acquisition breaches $\bar K-k-y\geq\underline H$, selecting it causes extinction at that transition with probability $1-\rho$. If every feasible action preserves subsistence at every reachable state, extinction through the resource channel is impossible.
+\end{proposition}
+With more than two actions, this is a pairwise comparison: the chosen action must dominate every alternative. Commercial returns matter only if they alter the continuation values or feasibility.
+
+\subsection{Risk decomposition}
+Let $\tau\in\{1,\ldots,T\}\cup\{\infty\}$ be the first loss-of-control date. Under development strategies $\pi$, let $\mu^\pi_t$ be the subprobability distribution of its autonomous initial state at date $t$, with mass $\Prob_\pi(\tau=t)$.
+\begin{proposition}[Conditional and unconditional risk]\label{prop:decomp}
+If extinction occurs only after loss of control,
+\begin{equation}\label{eq:decomp}
+ \Prob_\pi(\text{extinction by }T)=\sum_{t=1}^T\int_{\mathcal Z}D_{T-t}(z)\,\mu^\pi_t(\dd z).
+\end{equation}
+Hence $0\leq\Prob_\pi(\text{extinction by }T)\leq\Prob_\pi(\tau\leq T)$. Risk can be positive under pure developer strategies. Their mixing probabilities alone do not identify extinction risk.
+\end{proposition}
+Proposition~\ref{prop:boundary} fixes $D_h(z)$, while commercial returns generally change $\mu^\pi_t$. Even conditional risk averaged over delegation events can change when launch states change. Conditional irrelevance at a fixed state is distinct from equilibrium irrelevance.
+
+\section{Policy coordination and welfare}\label{sec:policy}
+The policy menu contains open development, a safety standard removing the low-safety delegated action, and a ban removing all delegated actions while retaining supervised research. Unilateral policy changes one menu; coordination can change both. Enforcement is perfect and developers cannot relocate. The model studies competitive cross-border responses without estimating the enforceability of actual international agreements.
+
+\begin{proposition}[Welfare comparisons]\label{prop:planner}
+For fixed policies and any developer equilibrium, a human planner with access to every feasible joint action has weakly greater aggregate welfare. A coordinated regulator whose menu includes every unilateral policy pair obtains weakly greater aggregate welfare than the best unilateral pair, under the specified continuation selection. Neither inequality implies an ordering of extinction probabilities or a Pareto improvement for both jurisdictions.
+\end{proposition}
+The planner can implement equilibrium randomization; coordination enlarges a menu. These feasibility comparisons do not remove distributional or positional incentives. Safety requirements change the amount and timing of delegated research. Whether coordination reduces risk requires examining equation~\eqref{eq:decomp}, rather than inferring a risk ordering from a welfare ordering. A government that bans its own developer's delegated research may leave profitable foreign development available. The direction of that foreign response remains an equilibrium question.

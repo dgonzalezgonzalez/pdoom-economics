@@ -1,0 +1,64 @@
+{
+  "sample": {
+    "raw": 135634,
+    "first_round": 108315,
+    "raw_models": 53,
+    "primary_matched_models": 32,
+    "first_date": "2025-04-17 00:20:51.563409",
+    "last_date": "2025-07-24 23:59:41.255781"
+  },
+  "primary": {
+    "n": 27471,
+    "models": 32,
+    "clusters": 441,
+    "coef": [
+      -0.00859398777094832,
+      0.4192943150367462,
+      -0.10057054230614258
+    ],
+    "se": [
+      0.012950204049724242,
+      0.053092528554682716,
+      0.05705763780729389
+    ],
+    "covariance": [
+      [
+        0.00016770778492949414,
+        -5.338648033862157e-06,
+        -3.911510566467955e-06
+      ],
+      [
+        -5.338648033862134e-06,
+        0.0028188165883297994,
+        0.002198028353646753
+      ],
+      [
+        -3.911510566467954e-06,
+        0.002198028353646755,
+        0.0032555740321483337
+      ]
+    ],
+    "metric": "eci",
+    "ties": false,
+    "quadratic": true,
+    "log_likelihood": -18533.99959556014,
+    "score_per_observation": 4.50211951588708e-12
+  },
+  "cost": {
+    "n": 18,
+    "log_cost_per_10_eci": 1.8538057252538604,
+    "se_hc1": 0.13836395051980316,
+    "with_year": 1.861095646841405,
+    "with_year_se": 0.28395321266109935,
+    "median_cost_usd2023": 5146322.061691513
+  },
+  "calibration": {
+    "eci_frontier_2026": 168.83,
+    "eci_frontier_2025": 150.59,
+    "eci_points_per_year": 18.24000000000001,
+    "eta_matching_one_year_frontier": 5.456425090672222,
+    "cost_exponent_log_capability": 1.8538057252538604,
+    "capability_mapping": "a = exp((ECI-ECI_reference)/10)",
+    "warning": "Descriptive cross-sectional bridges, not causal or future technology estimates."
+  }
+}

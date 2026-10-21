@@ -1,0 +1,44 @@
+{
+  "epoch_models": {
+    "url": "https://epoch.ai/data/all_ai_models.csv",
+    "path": "data\\raw\\epoch_models.csv",
+    "sha256": "271051c653d9a602afe4c96c4da83afb5a783095a416a984a5b76109be990aaf",
+    "retrieved": "2026-10-21"
+  },
+  "arena": {
+    "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k",
+    "revision": "6322995ab34d7c2693e3f47dd13fa5caa0789a74",
+    "path": "data\\raw\\arena_numeric.parquet",
+    "columns": [
+      "model_a",
+      "model_b",
+      "winner",
+      "evaluation_order",
+      "language",
+      "is_code",
+      "timestamp"
+    ],
+    "license": "CC-BY-4.0",
+    "sha256": "19b3bb640d8cbac74a6c1cf00898318d459ab3f6578d5ee630c9a1b2e428fffb",
+    "retrieved": "2026-10-21"
+  },
+  "eci": {
+    "url": "https://epoch.ai/data/eci_scores.csv",
+    "path": "data\\raw\\eci_scores.csv",
+    "sha256": "540796e67e6158f290edfb97a2633ca871edf9f1a89c78fc9d06cd20ca33cf64",
+    "retrieved": "2026-10-21"
+  },
+  "edi": {
+    "url": "https://epoch.ai/data/edi_scores.csv",
+    "path": "data\\raw\\edi_scores.csv",
+    "sha256": "cce0f3c05598d0ff80b5f9c55c20f6462fa95b90b7c3f5765fbfe46e32a77bea",
+    "retrieved": "2026-10-21"
+  },
+  "benchmark_scores": {
+    "url": "https://epoch.ai/data/benchmark_data.zip",
+    "path": "data\\raw\\benchmark_data.zip",
+    "sha256": "d27bba54271bfa17f13083f2c947a01c24e0e15ceaa4d226cf83da7f992f8800",
+    "retrieved": "2026-10-21",
+    "license": "Epoch attribution; external sources retain terms"
+  }
+}
