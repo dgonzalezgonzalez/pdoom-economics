@@ -41,8 +41,14 @@ def compile_pdf():
         if result.returncode:
             (ROOT/'output/latex_build.log').write_text('\n'.join(build_log),encoding='utf-8')
             raise RuntimeError(f'LaTeX command failed: {command[0]}; see output/latex_build.log')
+    for _ in range(3):
+        log=(ROOT/'paper/main.log').read_text(encoding='utf-8',errors='replace')
+        if 'Rerun to get cross-references right' not in log and 'Table widths have changed' not in log:break
+        result=subprocess.run(commands[0],cwd=ROOT/'paper',capture_output=True,text=True,encoding='utf-8',errors='replace')
+        build_log.append(result.stdout+'\n'+result.stderr)
+        if result.returncode:raise RuntimeError('Additional LaTeX reference-stabilization pass failed')
     log=(ROOT/'paper/main.log').read_text(encoding='utf-8',errors='replace')
-    for bad in ['There were undefined references','There were undefined citations','Rerun to get cross-references right']:
+    for bad in ['There were undefined references','There were undefined citations','Rerun to get cross-references right','Table widths have changed']:
         assert bad not in log,bad
     (ROOT/'output/pdf').mkdir(parents=True,exist_ok=True)
     shutil.copy2(ROOT/'paper/main.pdf',ROOT/'output/pdf/paper.pdf')
@@ -64,7 +70,7 @@ def compile_pdf():
             x=(offset%4)*255+5;y=(offset//4)*350+20
             sheet.paste(im,(x,y));draw.text((x,y-16),str(start+offset+1),fill='black')
         sheet.save(qa/f'contact-{start//12+1}.png')
-    return {'pages':len(doc),'page_details':pages,'overfull_boxes':log.count('Overfull \\hbox')}
+    return {'pages':len(doc),'page_details':pages,'overfull_boxes':log.count('Overfull \\hbox'),'latex_passes':len(build_log)-1}
 
 
 def main():

@@ -35,7 +35,7 @@
     "PyMuPDF": "1.28.2"
   },
   "pdf": {
-    "pages": 32,
+    "pages": 31,
     "page_details": [
       {
         "page": 1,
@@ -195,7 +195,7 @@
       },
       {
         "page": 27,
-        "characters": 2349,
+        "characters": 2359,
         "width": 612.0,
         "height": 792.0
       },
@@ -219,18 +219,12 @@
       },
       {
         "page": 31,
-        "characters": 156,
-        "width": 612.0,
-        "height": 792.0
-      },
-      {
-        "page": 32,
-        "characters": 1590,
+        "characters": 1743,
         "width": 612.0,
         "height": 792.0
       }
     ],
     "overfull_boxes": 0
   },
-  "seconds": 6.91
+  "seconds": 7.18
 }
