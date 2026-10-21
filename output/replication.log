@@ -22,6 +22,48 @@ All equilibrium, mortality, resource, probability, planner and counterexample ch
       0.053092528554682716,
       0.05705763780729389
     ],
+    "covariance": [
+      [
+        0.00016770778492949414,
+        -5.338648033862157e-06,
+        -3.911510566467955e-06
+      ],
+      [
+        -5.338648033862134e-06,
+        0.0028188165883297994,
+        0.002198028353646753
+      ],
+      [
+        -3.911510566467954e-06,
+        0.002198028353646755,
+        0.0032555740321483337
+      ]
+    ],
+    "se_dyadic": [
+      0.012358130209737344,
+      0.1445431621942106,
+      0.1583581857452801
+    ],
+    "covariance_dyadic": [
+      [
+        0.00015272338228082278,
+        -0.00016878407869669852,
+        0.0006634370489134443
+      ],
+      [
+        -0.00016878407869669868,
+        0.020892725737101873,
+        0.014443566596267008
+      ],
+      [
+        0.0006634370489134438,
+        0.01444356659626702,
+        0.025077314992536636
+      ]
+    ],
+    "dyadic_min_eigenvalue": 0.00011052097863657227,
+    "score_min": 126.46,
+    "score_max": 146.73,
     "metric": "eci",
     "ties": false,
     "quadratic": true,
@@ -47,15 +89,19 @@ All equilibrium, mortality, resource, probability, planner and counterexample ch
   }
 }
 5 years 0.0 0.044241 boundary 0.0
-25 years 0.043585 0.045761 boundary 0.0
-25 years, no acquisition 0.0 0.050498 boundary 0.0
+25 years 0.043585 0.04576 boundary 0.0
+25 years, no acquisition 0.0 0.050486 boundary 0.0
 25 years, full common loss shock 0.025937 0.027191 boundary 0.0
-25 years, high-risk pure selection 0.045813 0.047999 boundary 0.0
+25 years, high-risk pure selection 0.045812 0.047998 boundary 0.0
 25 years, half capability mesh 0.04353 0.045614 boundary 0.0
 25 years, double capability ceiling 0.043585 0.04576 boundary 0.0
 25 years, zero terminal values 0.040255 0.042431 boundary 0.0
-25 years, long terminal values 0.041078 0.056463 boundary 0.0
-25 years, no containment 0.045742 0.045742 boundary 0.0
+25 years, long terminal values 0.047255 0.059466 boundary 0.0
+25 years, human terminal only zero 0.040263 0.042431 boundary 0.0
+25 years, AI terminal only zero 0.043578 0.045762 boundary 0.0
+25 years, post-containment recovery 0.043476 0.045648 boundary 0.0
+25 years, acquisition budget boundary 0.043575 0.045741 boundary 0.0
+25 years, no containment 0.045741 0.045741 boundary 0.0
 25 years, no positional prize 0.030005 0.032105 boundary 0.0
 25 years, low research feedback 0.038711 0.043567 boundary 0.0
 25 years, high research feedback 0.036922 0.037855 boundary 0.0
@@ -63,6 +109,10 @@ bridge, half cost slope 0.0 0.008104 boundary 0.0
 bridge, double finance 0.0 0.0 boundary 0.0
 bridge, ready to delegate 0.0 0.008104 boundary 0.0
 bridge, higher market scale 0.0 0.0 boundary 0.0
+bridge, quarter-size projects 0.0 0.018162 boundary 0.0
+bridge, quarter-size projects, 25 years 0.018157 0.018162 boundary 0.0
+cost bridge only 0.0 0.00812 boundary 0.0
+progress bridge only 0.0 0.008104 boundary 0.0
 curvature sweep -1.0
 curvature sweep 0.0
 curvature sweep 0.5
@@ -109,7 +159,7 @@ Scenario results saved.
   },
   "model_checks": "passed",
   "pdf": {
-    "pages": 24,
+    "pages": 32,
     "page_details": [
       {
         "page": 1,
@@ -119,138 +169,186 @@ Scenario results saved.
       },
       {
         "page": 2,
-        "characters": 3583,
+        "characters": 3562,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 3,
-        "characters": 3319,
+        "characters": 3328,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 4,
-        "characters": 2158,
+        "characters": 2149,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 5,
-        "characters": 2583,
+        "characters": 2991,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 6,
-        "characters": 2513,
+        "characters": 2543,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 7,
-        "characters": 2381,
+        "characters": 2744,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 8,
-        "characters": 2321,
+        "characters": 2709,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 9,
-        "characters": 2332,
+        "characters": 2207,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 10,
-        "characters": 2484,
+        "characters": 2087,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 11,
-        "characters": 3038,
+        "characters": 2598,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 12,
-        "characters": 2761,
+        "characters": 2663,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 13,
-        "characters": 2534,
+        "characters": 2742,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 14,
-        "characters": 2741,
+        "characters": 2837,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 15,
-        "characters": 2958,
+        "characters": 3169,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 16,
-        "characters": 2926,
+        "characters": 2768,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 17,
-        "characters": 2367,
+        "characters": 3654,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 18,
-        "characters": 3040,
+        "characters": 2826,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 19,
-        "characters": 3280,
+        "characters": 3148,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 20,
-        "characters": 2770,
+        "characters": 3404,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 21,
-        "characters": 2115,
+        "characters": 2421,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 22,
-        "characters": 2321,
+        "characters": 3040,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 23,
-        "characters": 2446,
+        "characters": 3536,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 24,
+        "characters": 3385,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 25,
+        "characters": 2315,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 26,
+        "characters": 1734,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 27,
+        "characters": 2160,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 28,
+        "characters": 2681,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 29,
+        "characters": 2772,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 30,
+        "characters": 1741,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 31,
+        "characters": 555,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 32,
         "characters": 1590,
         "width": 612.0,
         "height": 792.0
@@ -258,5 +356,5 @@ Scenario results saved.
     ],
     "overfull_boxes": 0
   },
-  "seconds": 111.71
+  "seconds": 195.01
 }

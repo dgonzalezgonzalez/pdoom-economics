@@ -34,9 +34,8 @@
     "pyarrow": "23.0.1",
     "PyMuPDF": "1.28.2"
   },
-  "model_checks": "passed",
   "pdf": {
-    "pages": 24,
+    "pages": 32,
     "page_details": [
       {
         "page": 1,
@@ -46,138 +45,186 @@
       },
       {
         "page": 2,
-        "characters": 3583,
+        "characters": 3562,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 3,
-        "characters": 3319,
+        "characters": 3328,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 4,
-        "characters": 2158,
+        "characters": 2149,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 5,
-        "characters": 2583,
+        "characters": 2991,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 6,
-        "characters": 2513,
+        "characters": 2543,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 7,
-        "characters": 2381,
+        "characters": 2744,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 8,
-        "characters": 2321,
+        "characters": 2709,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 9,
-        "characters": 2332,
+        "characters": 2207,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 10,
-        "characters": 2484,
+        "characters": 2087,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 11,
-        "characters": 3038,
+        "characters": 2598,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 12,
-        "characters": 2761,
+        "characters": 2663,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 13,
-        "characters": 2670,
+        "characters": 2742,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 14,
-        "characters": 2741,
+        "characters": 2837,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 15,
-        "characters": 2958,
+        "characters": 3169,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 16,
-        "characters": 2926,
+        "characters": 2768,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 17,
-        "characters": 2367,
+        "characters": 3654,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 18,
-        "characters": 3040,
+        "characters": 2826,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 19,
-        "characters": 3280,
+        "characters": 3148,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 20,
-        "characters": 2770,
+        "characters": 3404,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 21,
-        "characters": 2115,
+        "characters": 2421,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 22,
-        "characters": 2321,
+        "characters": 3040,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 23,
-        "characters": 2493,
+        "characters": 3536,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 24,
+        "characters": 3385,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 25,
+        "characters": 2315,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 26,
+        "characters": 1620,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 27,
+        "characters": 2349,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 28,
+        "characters": 975,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 29,
+        "characters": 3044,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 30,
+        "characters": 2887,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 31,
+        "characters": 156,
+        "width": 612.0,
+        "height": 792.0
+      },
+      {
+        "page": 32,
         "characters": 1590,
         "width": 612.0,
         "height": 792.0
@@ -185,5 +232,5 @@
     ],
     "overfull_boxes": 0
   },
-  "seconds": 111.71
+  "seconds": 6.91
 }

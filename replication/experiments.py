@@ -16,7 +16,7 @@ OUT=ROOT/'output'
 def compact(r):
     return {k:r[k] for k in ['V1','V2','W1','W2','welfare','doom','escape','doom_given_escape',
                              'research_cycles','delegated_cycles','boundary_probability','diagnostics',
-                             'grid_expansions','capability_ceiling','ai_ceiling']}
+                             'grid_expansions','capability_ceiling','ai_ceiling','domain_certificate','welfare_components']}
 
 
 def run():
@@ -35,6 +35,10 @@ def run():
         '25 years, double capability ceiling':replace(p,horizon=25,capability_max=28,ai_max=200),
         '25 years, zero terminal values':replace(p,horizon=25,terminal_years=0,terminal_ai=0),
         '25 years, long terminal values':replace(p,horizon=25,terminal_years=20,terminal_ai=5),
+        '25 years, human terminal only zero':replace(p,horizon=25,terminal_years=0),
+        '25 years, AI terminal only zero':replace(p,horizon=25,terminal_ai=0),
+        '25 years, post-containment recovery':replace(p,horizon=25,recovery_share=1),
+        '25 years, acquisition budget boundary':replace(p,horizon=25,acquisition_boundary=True),
         '25 years, no containment':replace(p,horizon=25,containment=0),
         '25 years, no positional prize':replace(p,horizon=25,prize=0),
         '25 years, low research feedback':replace(p,horizon=25,research_feedback=.3),
@@ -43,6 +47,10 @@ def run():
         'bridge, double finance':replace(bridge,external_finance=2*p.external_finance),
         'bridge, ready to delegate':replace(bridge,launch_capability=1),
         'bridge, higher market scale':replace(bridge,commercial_scale=4),
+        'bridge, quarter-size projects':replace(bridge,project_size=.25),
+        'bridge, quarter-size projects, 25 years':replace(bridge,project_size=.25,horizon=25),
+        'cost bridge only':replace(p,cost_exponent=bridge.cost_exponent),
+        'progress bridge only':replace(p,research_eta=bridge.research_eta),
     }
     for name,pp in cases.items():
         r=solve(pp)
@@ -50,6 +58,16 @@ def run():
         print(name,round(r['doom'],6),round(r['escape'],6),'boundary',r['boundary_probability'],flush=True)
     long=replace(p,horizon=25)
     results['long_policy']=policy_game(long)
+    for key in ['reference','long_policy','empirical_bridge']:
+        assert results[key]['planner']['welfare']>=max(r['welfare'] for r in results[key]['cases'].values())-1e-6
+    g=results['long_policy']['cases']
+    assert g['open/open']['W1']>g['ban/open']['W1'] and g['open/ban']['W1']>g['ban/ban']['W1']>g['open/open']['W1']
+    assert g['open/open']['W2']>g['open/ban']['W2'] and g['ban/open']['W2']>g['ban/ban']['W2']>g['open/open']['W2']
+    results['fixed_long_horizon']=solve(long,track_cdf=True)
+    pd.DataFrame(results['fixed_long_horizon']['fixed_policy_cumulative_risk']).to_csv(OUT/'tables/fixed_horizon_risk.csv',index=False)
+    results['certificates']={}
+    for name,pp in [('reference',p),('25 years',long),('empirical bridge',bridge)]:
+        results['certificates'][name]=solve(pp,certificate=True)['no_delegation_certificate']
     # First-loss continuation evaluated at a fixed launch state: no commercial parameter enters.
     continuation=[]
     for horizon in [5,10,25]:
@@ -64,8 +82,11 @@ def run():
     for sigma in [-1.,0.,.5,1.,1.3,2.,3.]:
         for q in [0.,.01,.03,.1,.3,.6]:
             rr=solve(replace(long,sigma=sigma,q0=q))
-            regime=('stopping' if rr['research_cycles']<1e-8 else 'controlled innovation' if rr['delegated_cycles']<1e-8
-                    else 'exposure without extinction by T' if rr['doom']<1e-8 else 'positive extinction probability')
+            regime=('stopping within numerical tolerance' if rr['research_cycles']<1e-8
+                    else 'controlled innovation within numerical tolerance' if rr['delegated_cycles']<1e-8
+                    else 'exposure with exactly zero computed extinction by T' if rr['doom']==0
+                    else 'positive extinction below reporting tolerance' if rr['doom']<1e-8
+                    else 'positive extinction probability')
             rows.append({'sigma':sigma,'q0':q,'doom':rr['doom'],'escape':rr['escape'],
                          'research_cycles':rr['research_cycles'],'delegated_cycles':rr['delegated_cycles'],
                          'welfare':rr['welfare'],'boundary':rr['boundary_probability'],'regime':regime})

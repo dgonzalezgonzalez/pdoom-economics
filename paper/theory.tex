@@ -44,7 +44,9 @@ A cardinal interpretation is part of a claim about returns to intelligence. A pr
 \subsection{Timing and information}
 There are two jurisdictions $j\in\{1,2\}$, each with one developer $i\in\{1,2\}$. The labels carry no country-specific behavioral assumptions. At date zero governments simultaneously select policies $g_j$ from finite sets $\mathcal G_j$. The policies are observed and remain in force throughout a development game lasting $T$ periods. A numerical period is one year.
 
-While humans retain control, the public state $x\in\mathcal X$ records capabilities $(a_1,a_2)$, infrastructure $(K_1,K_2)$, and control status. State sets are finite. Infrastructure can change in the general transition kernel; it remains fixed before loss of control in the numerical specialization. Developers simultaneously choose feasible actions $b_i=(e_i,s_i,d_i)\in\mathcal B_i(x;g_i)$, representing research expenditure, safety effort, and a delegated-research indicator. Feasible sets are finite and contain holding the current technology. Research produces an updated state $x'$ under kernel $P(\cdot\mid x,b_1,b_2)$.
+Controlled and autonomous capability is strictly positive; the numerical specialization uses $a\geq1$. This avoids undefined contest shares or negative powers at zero. The earlier static counterexamples on $a\geq0$ are separate benchmark problems without contest shares.
+
+While humans retain control, the public state $x\in\mathcal X$ records capabilities $(a_1,a_2)$, infrastructure $(K_1,K_2)$, and control status. State sets are finite. Infrastructure can change in the general transition kernels; it remains fixed before loss of control in the numerical specialization. Developers simultaneously choose feasible actions $b_i=(e_i,s_i,d_i)\in\mathcal B_i(x;g_i)$, representing research expenditure, safety effort, and a delegated-research indicator. Feasible sets are finite and contain holding the current technology. Research and control outcomes determine either an updated controlled state $x'$ or an initial autonomous state $z$ through the conditional kernels defined below.
 
 Let $q_i(x,b_i)\in[0,1]$ be the probability that developer $i$ loses control at the end of the period. It is zero when $d_i=0$. These are common, correctly understood probabilities in the baseline; they are not empirically estimated. Let $q_{12}$ be the probability of simultaneous failures, satisfying
 \begin{equation}
@@ -59,7 +61,7 @@ Before loss of control, developer $i$ receives
 \begin{equation}\label{eq:private}
  r_i(x,b)=\ell_i+R_\sigma(a_i)+v_iS_i(a_1,a_2)-c_i(a_i,e_i)-k_i(s_i),
 \end{equation}
-where $\ell_i>0$ is the flow value of life, $v_i\geq0$ the positional-reward scale, and $c_i$ and $k_i$ real research and safety costs. Define the centered contest share
+where $\ell_i>0$ is baseline flow utility from life and consumption, $v_i\geq0$ the positional-reward scale, and $c_i$ and $k_i$ real research and safety costs. After resource diversion this composite utility falls with production before extinction; it is not a separately estimated pure value of survival. Define the centered contest share
 \begin{equation}
  S_i(a_1,a_2)=\frac{a_i^\theta}{a_1^\theta+a_2^\theta}-\frac12,\qquad\theta>0.
 \end{equation}
@@ -75,12 +77,12 @@ where $L>0$ is aggregate baseline life and production value, $\chi\in(0,1]$ the 
 Current flows and research costs occur before the end-of-period transition. All subsequent benefits disappear upon extinction. Private and human payoffs are discounted by $\beta\in(0,1)$. Terminal values give frozen-technology continuation to survivors. They do not assign payoffs to owners who no longer exist.
 
 \subsection{Bellman games}
-Let $V_{i,h}(x)$ be developer $i$'s value with $h$ periods remaining, and $Z^i_h(z)$ its human continuation value after loss of control under an autonomous optimal policy. Let $M_j(x',b)$ map failure by developer $j$ into an initial autonomous state. The stage-game payoff is
+Let $V_{i,h}(x)$ be developer $i$'s value with $h$ periods remaining, and $Z^i_h(z)$ its human continuation value after loss of control under an autonomous optimal policy. Conditional on no failure, $P_0(\cdot\mid x,b)$ is the probability kernel on controlled states. Conditional on system $j$ being selected after failure, $P_j(\cdot\mid x,b)$ is its initial-state kernel on autonomous states. With $b=(b_1,b_2)$, the stage-game payoff is
 \begin{equation}\label{eq:Q}
- Q_{i,h}(x,b)=r_i(x,b)+\beta\E\left[
- \omega_0V_{i,h-1}(x')+\sum_{j=1}^2\omega_jZ^i_{h-1}(M_j(x',b))\right].
+ Q_{i,h}(x,b)=r_i(x,b)+\beta\left[
+ \omega_0\E_{P_0}V_{i,h-1}(x')+\sum_{j=1}^2\omega_j\E_{P_j}Z^i_{h-1}(z)\right].
 \end{equation}
-Expectations cover research outcomes and initial-state randomization. Failure probabilities are independent of $x'$ in the specialization; if they depend on that outcome, their appropriate arguments remain inside the expectation. At each state developers play a Nash equilibrium of this finite game. Terminal values are $V_{i,0}$.
+The weights $\omega_j$ are branch probabilities, and each conditional kernel sums to one; a zero-weight branch can use any kernel. This notation permits research outcomes and failures to be dependent, provided both branch probabilities and conditional kernels describe the same joint transition law. In the specialization, failure probabilities depend on chosen safety rather than realized research. At each state developers play a Nash equilibrium of this finite game. Terminal values are $V_{i,0}$.
 
 Jurisdiction values $W_{i,h}$ follow the same transitions and developer strategies, replacing $r_i$ with $w_i$ and the post-control human continuation accordingly. Governments play a Nash equilibrium of the date-zero game with payoffs $W_{i,T}(x_0;g_1,g_2)$. A coordinated regulator maximizes $W_{1,T}+W_{2,T}$ over policy pairs and a specified continuation-equilibrium selection. A human planner directly chooses both developers' actions at each controlled state, but cannot change the uncontrolled system's objective.
 
@@ -94,7 +96,7 @@ Existence does not imply uniqueness or monotone comparative statics. The quantit
 Fix policies and remove all delegated actions. Let $\pi^0$ be a Markov equilibrium of this restricted game, specified at every controlled state, with values $V^0_{i,h}$. Evaluate $Q^0_{i,h}$ for every original action using equation~\eqref{eq:Q}, substituting $V^0$ in controlled continuation and retaining the actual autonomous values.
 
 \begin{theorem}[No-delegation certificate]\label{thm:certificate}
-The profile $\pi^0$, together with the specified autonomous optimal policies, is an equilibrium of the unrestricted development game if and only if, for every developer $i$, controlled state $x$, horizon $h\geq1$, and feasible delegated action $b_i$,
+The profile $\pi^0$, together with the specified autonomous optimal policies, is a time-dependent Markov-perfect, hence subgame-perfect, equilibrium of the unrestricted development game if and only if, for every developer $i$, controlled state $x$, horizon $h\geq1$, and feasible delegated action $b_i$,
 \begin{equation}\label{eq:certificate}
  \E_{b_{-i}\sim\pi^0_{-i,h}(x)}Q^0_{i,h}(x,b_i,b_{-i})\leq V^0_{i,h}(x).
 \end{equation}
@@ -103,8 +105,28 @@ If delegation is the only route to loss of control and extinction, that equilibr
 
 The condition is global in states and time. An initial first-order condition is insufficient: research today can create a profitable delegation opportunity later. The certificate permits controlled innovation rather than requiring all research to stop. A sufficient implementation can replace delegated payoffs with valid upper bounds, but those bounds must include gains over all technologically reachable future states, positional rewards, and research options. Bounding the next model's sales alone is insufficient.
 
+\subsection{An explicit recursive stopping benchmark}
+The certificate can be made primitive in a restricted research problem. Consider an infinitely lived, controlled developer without competition or catastrophe. Its commercial flow is $R(a)=R_\infty-ba^{-r}$, with $a\geq1$, $b>0$, and $r>0$. Benefits are bounded and strictly concave. The developer either stops permanently or pays $c_0a^{-\xi}$ to increase capability to $\lambda a$ next period, where $c_0>0$, $\lambda>1$, and $\xi\in\mathbb R$. Stopping yields $R(a)/(1-\beta)$; the stopping decision is absorbing. This benchmark isolates whether recursive cost reductions can overcome commercial saturation. It is separate from the finite numerical game.
+
+\begin{proposition}[Commercial saturation versus recursive cost reduction]\label{prop:recursive}
+Let $K=\beta b(1-\lambda^{-r})/(1-\beta)>0$. For $N$ successive research steps followed by stopping, the payoff difference relative to immediate stopping is
+\begin{equation}\label{eq:recursivegain}
+ \sum_{n=0}^{N-1}\beta^n\left[K(\lambda^na)^{-r}-c_0(\lambda^na)^{-\xi}\right].
+\end{equation}
+If $\xi<r$, immediate stopping is uniquely optimal at every $a>(K/c_0)^{1/(r-\xi)}$; every optimal path stops after finitely many research steps. If $\xi>r$, never stopping is uniquely optimal at every $a>(c_0/K)^{1/(\xi-r)}$. If $\xi=r$, research forever is uniquely optimal when $K>c_0$, immediate stopping is uniquely optimal when $K<c_0$, and every stopping time is optimal when $K=c_0$.
+\end{proposition}
+
+The strict inequalities describe eventual regions, rather than a complete initial-state solution. With $\xi>r$, an initially unprofitable step can purchase access to a profitable future region. A local comparison alone does not exclude that option. At the boundary of the eventual stopping region for $\xi<r$, immediate stopping and exactly one research step are tied. At the boundary for $\xi>r$, all subsequent steps have positive gains, so continuation is strictly better.
+
+For a technological interpretation, suppose a divisible research input satisfies $a'=a+\eta a^{\phi-\psi}e^\alpha$, with input price $p_0a^\zeta$, $p_0,\eta,\alpha>0$, and no bottleneck. Producing the proportional step $\lambda a$ costs
+\begin{equation}
+ p_0\left(\frac{\lambda-1}{\eta}\right)^{1/\alpha}
+ a^{\zeta+(1-\phi+\psi)/\alpha}.
+\end{equation}
+Thus $\xi=(\phi-\psi-1)/\alpha-\zeta$. Recursive cost reductions eventually dominate saturation when $\phi-\psi>1+\alpha(\zeta+r)$, and saturation eventually dominates under the reverse inequality. In the commercial family~\eqref{eq:envelope}, bounded benefits require $\sigma>1$, with $r=\sigma-1$. This benchmark supplies an explicit joint restriction on commercial saturation and research technology; neither $R''<0$ nor bounded revenue alone supplies it. Minimum project sizes, financing constraints, bottlenecks, and risk change the comparison.
+
 \subsection{A local delegation threshold}
-At a fixed state and horizon, compare a supervised action $s$ with a delegated action $d$ against a rival that does not delegate this period. Let their current payoff difference be $-\Delta c$. Denote expected next-period controlled values by $G_s,G_d$ and human continuation after the delegated action's failure by $Z_d$. Suppose its failure probability $q$ is independent of its research outcome, or use the corresponding conditional expectations. Then
+At a fixed state and horizon, compare a supervised action $s$ with a delegated action $d$ against a rival that does not delegate this period. Let their current payoff difference be $-\Delta c$. Denote expected next-period controlled values by $G_s,G_d$ and human continuation after the delegated action's failure by $Z_d$. Suppose its failure probability $q$ is independent of its research outcome. Then
 \begin{equation}\label{eq:delegationgap}
  Q_d-Q_s=\underbrace{\beta(G_d-G_s)-\Delta c}_{N}
        -\beta q\underbrace{(G_d-Z_d)}_{H}.
@@ -115,6 +137,13 @@ Here $N$ is the delegation gain before control risk and $H$ the private loss of 
 If $H>0$, delegation is weakly preferred exactly when $q\leq N/(\beta H)$. It is strictly inferior for all $q\geq0$ if $N<0$, and strictly preferred for all $q\in[0,1]$ if $N>\beta H$. If $H=0$, its ranking is determined by $N$. If $H<0$, the direction of the risk inequality reverses.
 \end{proposition}
 Continuation values are held fixed. Re-solving the game after changing risk can change $G_d$, $Z_d$, and the selected equilibrium. Thus this formula is a decision threshold, not a global equilibrium monotonicity theorem. Diminishing commercial returns can lower $N$, while lower research costs, stronger assistance, and positional rewards can raise it.
+
+For outcome-dependent failure, let $X$ denote a common delegated research outcome, $V(X)$ its controlled continuation, and $Z(X)$ its failure continuation. Define $H(X)=V(X)-Z(X)$ and $N=\beta(\E V(X)-G_s)-\Delta c$. Direct subtraction instead gives
+\begin{equation}
+ Q_d-Q_s=N-\beta\E[q(X)H(X)]
+ =N-\beta\E q(X)\E H(X)-\beta\operatorname{Cov}(q(X),H(X)).
+\end{equation}
+Hence merely replacing $q$ by its unconditional mean need not preserve the threshold.
 
 \subsection{A verified prisoner's dilemma}
 A negative externality alone does not establish a prisoner's dilemma. Consider two developers choosing pause or launch. With $m_L\in\{0,1,2\}$ launchers, survival probability is $(1-q)^{m_L}$. A surviving developer receives $B>0$, plus $v>0$ if it launched; launching costs $c\geq0$ immediately:
@@ -132,7 +161,7 @@ For $B=10$, $q=0.1$, $c=0.1$, and $v=1.5$, launching against pause gives $10.25$
 
 \section{Autonomous research and resource acquisition}\label{sec:autonomy}
 \subsection{The autonomous problem}
-An autonomous state is $z=(a,k)$: capability and resource stock. Total potentially usable resources are $\bar K$ and the initial stock is $k_0$. Humans use $\bar K-k$, with productive consumption index
+An autonomous state is $z=(a,k)$: capability and productive resource capacity. Total capacity is $\bar K>k_0$, the initial autonomous stock is $k_0>0$, and $\bar K-k_0\geq\underline H$. Humans use $\bar K-k$, with productive consumption index
 \begin{equation}\label{eq:humanproduction}
  g(k)=\left(\frac{\bar K-k}{\bar K-k_0}\right)^\nu,\qquad\nu>0,
 \end{equation}
@@ -142,7 +171,7 @@ The system chooses research $e$ and acquisition $y\geq0$, subject to
 \begin{equation}\label{eq:AIbudget}
  e+\kappa_y y\leq k,\qquad k+y\leq\bar K,
 \end{equation}
-where $\kappa_y>0$ is the resource cost of acquisition. Resources next period are $k'=k+y$ and capability is $a'=F(a,e,k)$. A requirement $a\geq a_S$ can restrict acquisition. An attempt is contained with probability $\rho(a,y)$, with $\rho(a,0)=0$. Containment stops the system and restores humans' initial productive resources. The system places no direct value on human death or welfare.
+where $\kappa_y>0$ is the resource-service cost of acquisition. Capacity yields a renewed service flow each period: research uses those services without depleting the capacity stock. Capacity next period is $k'=k+y$ and capability is $a'=F(a,e,k)$. A requirement $a\geq a_S$ can restrict acquisition. An attempt is contained with probability $\rho(a,y)$, with $\rho(a,0)=0$. Containment stops the system and restores humans' initial productive resources. The system places no direct value on human death or welfare.
 
 Let $J_h(a,k)$ be its value with $h$ periods remaining, reward $u_A(a)$, discount factor $\beta_A\in(0,1)$, and terminal reward $J_0$. Then
 \begin{equation}\label{eq:AIBellman}
@@ -176,7 +205,7 @@ The premise about feasible actions matters. If all research must be financed by 
 \end{equation}
 where $p_e>0$ is an input price and $F_A\geq0$ is outside funding. Commercial curvature then affects feasible research. Enforcing $y=0$ also eliminates this specific resource-conflict extinction channel when initial human resources exceed subsistence. Neither restriction establishes safety against other channels.
 
-Bounded revenue does not necessarily bound capability. Suppose a permanent research input $\bar e>0$ is affordable and $a_{t+1}=a_t+\eta\bar e^\alpha a_t^{-\psi}$, with $\eta,\alpha>0$ and $\psi\geq0$. Convergence to a finite capability would imply positive increments bounded away from zero, a contradiction. The system eventually crosses every finite threshold even as progress slows. Stopping requires a reason to discontinue research, not merely a declining growth rate.
+Bounded revenue does not necessarily bound capability. Suppose $a_0>0$, a permanent research input $\bar e>0$ is affordable, and $a_{t+1}=a_t+\eta\bar e^\alpha a_t^{-\psi}$, with $\eta,\alpha>0$ and $\psi\geq0$. Convergence to a finite capability would imply positive increments bounded away from zero, a contradiction. The system eventually crosses every finite threshold even as progress slows. Stopping requires a reason to discontinue research, not merely a declining growth rate.
 
 \begin{proposition}[Acquisition and subsistence]\label{prop:acquisition}
 At a living state, compare an acquisition action with a no-acquisition action. Let $J_1>0$ and $J_0$ denote their expected optimal continuation rewards before containment, and suppose only acquisition has containment probability $\rho$. If these are the only actions, acquisition is optimal exactly when

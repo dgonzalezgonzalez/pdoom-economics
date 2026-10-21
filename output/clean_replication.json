@@ -1,0 +1,12 @@
+{
+  "commit": "5a1d9a436f29e3a69ef434aa1966c0bcf87b3b7e",
+  "source": "fresh git archive extracted into ignored cache",
+  "command": "python replication/run.py",
+  "exit_code": 0,
+  "model_results_identical": true,
+  "empirical_results_identical": true,
+  "model_checks": "passed",
+  "pdf_pages": 24,
+  "overfull_boxes": 0,
+  "seconds": 202.04
+}

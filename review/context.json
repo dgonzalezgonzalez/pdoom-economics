@@ -1,0 +1,2889 @@
+{
+  "reviewed_commit": "5a1d9a436f29e3a69ef434aa1966c0bcf87b3b7e",
+  "repository": "https://github.com/dgonzalezgonzalez/pdoom-economics",
+  "selection": "Lowest-risk pure equilibrium if one exists, otherwise verified mixed representative; not exhaustive equilibrium bounds.",
+  "cases": {
+    "reference": {
+      "cases": {
+        "open/open": {
+          "policies": [
+            "open",
+            "open"
+          ],
+          "planner": false,
+          "V1": 67.2001361067743,
+          "V2": 67.2001361067743,
+          "W1": 254.73322509186474,
+          "W2": 254.73322509186474,
+          "doom": 0.0,
+          "escape": 0.03295553784854179,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.016531806290676,
+          "delegated_cycles": 8.107366824318799,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 13,
+            "mixed_state_games": 2,
+            "max_deviation_gain": 1.4210854715202004e-14,
+            "state_games": 7290
+          },
+          "welfare": 509.4664501837295,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/standard": {
+          "policies": [
+            "open",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 67.20048931193892,
+          "V2": 67.19998189965806,
+          "W1": 254.7338897409273,
+          "W2": 254.73345907020612,
+          "doom": 0.0,
+          "escape": 0.03290949307184847,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.016871101629121,
+          "delegated_cycles": 8.107707091642112,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 13,
+            "mixed_state_games": 2,
+            "max_deviation_gain": 1.4210854715202004e-14,
+            "state_games": 7290
+          },
+          "welfare": 509.46734881113343,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/ban": {
+          "policies": [
+            "open",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 69.33409442290952,
+          "V2": 63.83586951628191,
+          "W1": 255.51357543937277,
+          "W2": 251.20561368269392,
+          "doom": 0.0,
+          "escape": 0.016124676778303603,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.73869704086238,
+          "delegated_cycles": 3.969352364898164,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 10,
+            "mixed_state_games": 3,
+            "max_deviation_gain": 7.105427357601002e-15,
+            "state_games": 7290
+          },
+          "welfare": 506.7191891220667,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/open": {
+          "policies": [
+            "standard",
+            "open"
+          ],
+          "planner": false,
+          "V1": 67.19998189965806,
+          "V2": 67.20048931193892,
+          "W1": 254.73345907020612,
+          "W2": 254.7338897409273,
+          "doom": 0.0,
+          "escape": 0.03290949307184847,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.01687110162912,
+          "delegated_cycles": 8.107707091642112,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 13,
+            "mixed_state_games": 2,
+            "max_deviation_gain": 1.4210854715202004e-14,
+            "state_games": 7290
+          },
+          "welfare": 509.46734881113343,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/standard": {
+          "policies": [
+            "standard",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 67.2003351051653,
+          "V2": 67.2003351051653,
+          "W1": 254.7341237200773,
+          "W2": 254.7341237200773,
+          "doom": 0.0,
+          "escape": 0.032863448185774496,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.017210397053354,
+          "delegated_cycles": 8.108047359051216,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 13,
+            "mixed_state_games": 2,
+            "max_deviation_gain": 1.4210854715202004e-14,
+            "state_games": 7290
+          },
+          "welfare": 509.4682474401546,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/ban": {
+          "policies": [
+            "standard",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 69.3340714686553,
+          "V2": 63.83592004454053,
+          "W1": 255.5136115560517,
+          "W2": 251.2057104135394,
+          "doom": 0.0,
+          "escape": 0.01611582151588378,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.738770260120246,
+          "delegated_cycles": 3.9693569753739606,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 10,
+            "mixed_state_games": 3,
+            "max_deviation_gain": 7.105427357601002e-15,
+            "state_games": 7290
+          },
+          "welfare": 506.7193219695911,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/open": {
+          "policies": [
+            "ban",
+            "open"
+          ],
+          "planner": false,
+          "V1": 63.835869516281896,
+          "V2": 69.33409442290952,
+          "W1": 251.20561368269392,
+          "W2": 255.51357543937274,
+          "doom": 0.0,
+          "escape": 0.016124676778303603,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.73869704086238,
+          "delegated_cycles": 3.969352364898164,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 10,
+            "mixed_state_games": 3,
+            "max_deviation_gain": 7.105427357601002e-15,
+            "state_games": 7290
+          },
+          "welfare": 506.71918912206667,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/standard": {
+          "policies": [
+            "ban",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 63.83592004454052,
+          "V2": 69.3340714686553,
+          "W1": 251.20571041353944,
+          "W2": 255.5136115560517,
+          "doom": 0.0,
+          "escape": 0.01611582151588378,
+          "boundary_probability": 0.0,
+          "research_cycles": 13.738770260120244,
+          "delegated_cycles": 3.9693569753739606,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 10,
+            "mixed_state_games": 3,
+            "max_deviation_gain": 7.105427357601002e-15,
+            "state_games": 7290
+          },
+          "welfare": 506.71932196959114,
+          "doom_given_escape": 0.0,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/ban": {
+          "policies": [
+            "ban",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 65.75494166703307,
+          "V2": 65.75494166703307,
+          "W1": 251.97647690754553,
+          "W2": 251.9764769075456,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 15.711337270395042,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 503.9529538150911,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        }
+      },
+      "coordinated": "standard/standard",
+      "planner": {
+        "policies": [
+          "open",
+          "open"
+        ],
+        "planner": true,
+        "V1": 67.25951090710913,
+        "V2": 67.25951090710913,
+        "W1": 254.7496175751689,
+        "W2": 254.74961757516888,
+        "doom": 0.0,
+        "escape": 0.03194308614647154,
+        "boundary_probability": 0.0,
+        "research_cycles": 12.790046456460786,
+        "delegated_cycles": 7.88088312417014,
+        "initial_action_joint": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diagnostics": {
+          "multiple_pure_state_games": 0,
+          "mixed_state_games": 0,
+          "max_deviation_gain": 0.0,
+          "state_games": 0
+        },
+        "welfare": 509.49923515033777,
+        "doom_given_escape": 0.0,
+        "initial_delegate_probability": 0.0,
+        "grid_expansions": 0,
+        "capability_ceiling": 14.0,
+        "ai_ceiling": 100.0
+      },
+      "government_equilibria": [
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        }
+      ]
+    },
+    "long_policy": {
+      "cases": {
+        "open/open": {
+          "policies": [
+            "open",
+            "open"
+          ],
+          "planner": false,
+          "V1": 104.1187464364617,
+          "V2": 104.1798876160016,
+          "W1": 387.42771618057833,
+          "W2": 387.4690800960281,
+          "doom": 0.0435854170487665,
+          "escape": 0.04576073138794594,
+          "boundary_probability": 0.0,
+          "research_cycles": 16.43754569947003,
+          "delegated_cycles": 11.289207820301822,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 162,
+            "mixed_state_games": 26,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 774.8967962766064,
+          "doom_given_escape": 0.9524632960793881,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/standard": {
+          "policies": [
+            "open",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 104.11874643646206,
+          "V2": 104.17988761600158,
+          "W1": 387.42771618057895,
+          "W2": 387.46908009602834,
+          "doom": 0.0435854170487665,
+          "escape": 0.045760731387873795,
+          "boundary_probability": 0.0,
+          "research_cycles": 16.437545699470142,
+          "delegated_cycles": 11.289207820301934,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 162,
+            "mixed_state_games": 26,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 774.8967962766073,
+          "doom_given_escape": 0.9524632960808896,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/ban": {
+          "policies": [
+            "open",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 108.9719967902067,
+          "V2": 99.26037794859641,
+          "W1": 392.92929155916664,
+          "W2": 385.4437400201979,
+          "doom": 0.02026240245213093,
+          "escape": 0.021353383933562554,
+          "boundary_probability": 0.0,
+          "research_cycles": 18.39820992614569,
+          "delegated_cycles": 5.259378392899556,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 66,
+            "mixed_state_games": 12,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 778.3730315793646,
+          "doom_given_escape": 0.9489082627453321,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/open": {
+          "policies": [
+            "standard",
+            "open"
+          ],
+          "planner": false,
+          "V1": 104.11874643646168,
+          "V2": 104.17988761600193,
+          "W1": 387.42771618057856,
+          "W2": 387.46908009602873,
+          "doom": 0.0435854170487665,
+          "escape": 0.045760731387873795,
+          "boundary_probability": 0.0,
+          "research_cycles": 16.437545699470142,
+          "delegated_cycles": 11.289207820301932,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 162,
+            "mixed_state_games": 26,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 774.8967962766073,
+          "doom_given_escape": 0.9524632960808896,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/standard": {
+          "policies": [
+            "standard",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 104.11874643646203,
+          "V2": 104.17988761600193,
+          "W1": 387.4277161805792,
+          "W2": 387.46908009602896,
+          "doom": 0.0435854170487665,
+          "escape": 0.045760731387801644,
+          "boundary_probability": 0.0,
+          "research_cycles": 16.437545699470252,
+          "delegated_cycles": 11.289207820302046,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 162,
+            "mixed_state_games": 26,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 774.8967962766081,
+          "doom_given_escape": 0.9524632960823914,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/ban": {
+          "policies": [
+            "standard",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 108.9719967902067,
+          "V2": 99.26037794859647,
+          "W1": 392.92929155916664,
+          "W2": 385.443740020198,
+          "doom": 0.02026240245213093,
+          "escape": 0.02135338393354755,
+          "boundary_probability": 0.0,
+          "research_cycles": 18.398209926145707,
+          "delegated_cycles": 5.259378392899576,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 66,
+            "mixed_state_games": 12,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 778.3730315793646,
+          "doom_given_escape": 0.9489082627459989,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/open": {
+          "policies": [
+            "ban",
+            "open"
+          ],
+          "planner": false,
+          "V1": 99.26037794859641,
+          "V2": 108.9719967902067,
+          "W1": 385.44374002019794,
+          "W2": 392.92929155916664,
+          "doom": 0.02026240245213093,
+          "escape": 0.021353383933562557,
+          "boundary_probability": 0.0,
+          "research_cycles": 18.39820992614569,
+          "delegated_cycles": 5.259378392899556,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 66,
+            "mixed_state_games": 12,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 778.3730315793646,
+          "doom_given_escape": 0.9489082627453319,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/standard": {
+          "policies": [
+            "ban",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 99.26037794859647,
+          "V2": 108.9719967902067,
+          "W1": 385.443740020198,
+          "W2": 392.92929155916664,
+          "doom": 0.02026240245213093,
+          "escape": 0.02135338393354755,
+          "boundary_probability": 0.0,
+          "research_cycles": 18.398209926145707,
+          "delegated_cycles": 5.259378392899575,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 66,
+            "mixed_state_games": 12,
+            "max_deviation_gain": 2.842170943040401e-14,
+            "state_games": 18225
+          },
+          "welfare": 778.3730315793646,
+          "doom_given_escape": 0.9489082627459989,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/ban": {
+          "policies": [
+            "ban",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 103.46735277713604,
+          "V2": 103.46735277713601,
+          "W1": 390.8245782829967,
+          "W2": 390.82457828299675,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 23.09497020433485,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 6,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 18225
+          },
+          "welfare": 781.6491565659935,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        }
+      },
+      "coordinated": "ban/ban",
+      "planner": {
+        "policies": [
+          "open",
+          "open"
+        ],
+        "planner": true,
+        "V1": 103.37771974503373,
+        "V2": 103.37771974503373,
+        "W1": 390.8355454315564,
+        "W2": 390.8355454315564,
+        "doom": 2.661995703733349e-10,
+        "escape": 0.0010588909405834805,
+        "boundary_probability": 0.0,
+        "research_cycles": 23.671964063877596,
+        "delegated_cycles": 0.26086531986907163,
+        "initial_action_joint": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diagnostics": {
+          "multiple_pure_state_games": 0,
+          "mixed_state_games": 0,
+          "max_deviation_gain": 0.0,
+          "state_games": 0
+        },
+        "welfare": 781.6710908631128,
+        "doom_given_escape": 2.513947000308181e-07,
+        "initial_delegate_probability": 0.0,
+        "grid_expansions": 0,
+        "capability_ceiling": 14.0,
+        "ai_ceiling": 100.0
+      },
+      "government_equilibria": [
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 2.2737367544323206e-13
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 2.2737367544323206e-13
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 2.2737367544323206e-13
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 2.2737367544323206e-13
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 1.1368683772161603e-13
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 2.2737367544323206e-13
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 1.1368683772161603e-13
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 1.1368683772161603e-13
+        }
+      ]
+    },
+    "empirical_bridge": {
+      "cases": {
+        "open/open": {
+          "policies": [
+            "open",
+            "open"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/standard": {
+          "policies": [
+            "open",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "open/ban": {
+          "policies": [
+            "open",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/open": {
+          "policies": [
+            "standard",
+            "open"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/standard": {
+          "policies": [
+            "standard",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "standard/ban": {
+          "policies": [
+            "standard",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/open": {
+          "policies": [
+            "ban",
+            "open"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/standard": {
+          "policies": [
+            "ban",
+            "standard"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        },
+        "ban/ban": {
+          "policies": [
+            "ban",
+            "ban"
+          ],
+          "planner": false,
+          "V1": 73.29635255305969,
+          "V2": 73.29635255305969,
+          "W1": 263.87617790781917,
+          "W2": 263.87617790781917,
+          "doom": 0.0,
+          "escape": 0.0,
+          "boundary_probability": 0.0,
+          "research_cycles": 2.0,
+          "delegated_cycles": 0.0,
+          "initial_action_joint": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "diagnostics": {
+            "multiple_pure_state_games": 0,
+            "mixed_state_games": 0,
+            "max_deviation_gain": 0.0,
+            "state_games": 7290
+          },
+          "welfare": 527.7523558156383,
+          "doom_given_escape": null,
+          "initial_delegate_probability": 0.0,
+          "grid_expansions": 0,
+          "capability_ceiling": 14.0,
+          "ai_ceiling": 100.0
+        }
+      },
+      "coordinated": "open/open",
+      "planner": {
+        "policies": [
+          "open",
+          "open"
+        ],
+        "planner": true,
+        "V1": 73.29635255305969,
+        "V2": 73.29635255305969,
+        "W1": 263.87617790781917,
+        "W2": 263.87617790781917,
+        "doom": 0.0,
+        "escape": 0.0,
+        "boundary_probability": 0.0,
+        "research_cycles": 2.0,
+        "delegated_cycles": 0.0,
+        "initial_action_joint": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diagnostics": {
+          "multiple_pure_state_games": 0,
+          "mixed_state_games": 0,
+          "max_deviation_gain": 0.0,
+          "state_games": 0
+        },
+        "welfare": 527.7523558156383,
+        "doom_given_escape": null,
+        "initial_delegate_probability": 0.0,
+        "grid_expansions": 0,
+        "capability_ceiling": 14.0,
+        "ai_ceiling": 100.0
+      },
+      "government_equilibria": [
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.5,
+            0.0,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "deviation": 0.0
+        },
+        {
+          "p1": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "p2": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "deviation": 0.0
+        }
+      ]
+    }
+  },
+  "sensitivity": {
+    "5 years": {
+      "V1": 48.62590041976539,
+      "V2": 48.62590041976538,
+      "W1": 186.48901157461358,
+      "W2": 186.48901157461358,
+      "welfare": 372.97802314922717,
+      "doom": 0.0,
+      "escape": 0.04424062266584419,
+      "doom_given_escape": 0.0,
+      "research_cycles": 9.929123342110856,
+      "delegated_cycles": 5.034826386068184,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 3645
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years": {
+      "V1": 104.1187464364617,
+      "V2": 104.1798876160016,
+      "W1": 387.42771618057833,
+      "W2": 387.4690800960281,
+      "welfare": 774.8967962766064,
+      "doom": 0.0435854170487665,
+      "escape": 0.04576073138794594,
+      "doom_given_escape": 0.9524632960793881,
+      "research_cycles": 16.43754569947003,
+      "delegated_cycles": 11.289207820301822,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 162,
+        "mixed_state_games": 26,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, no acquisition": {
+      "V1": 106.1033511094105,
+      "V2": 106.10335110941055,
+      "W1": 396.44376557281254,
+      "W2": 396.4437655728126,
+      "welfare": 792.8875311456252,
+      "doom": 0.0,
+      "escape": 0.050497903949861915,
+      "doom_given_escape": 0.0,
+      "research_cycles": 17.369065653141696,
+      "delegated_cycles": 12.459888560944766,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 34,
+        "mixed_state_games": 2,
+        "max_deviation_gain": 0.0,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, full common loss shock": {
+      "V1": 105.27202480519637,
+      "V2": 105.27202480519637,
+      "W1": 392.0295504249772,
+      "W2": 392.0295504249773,
+      "welfare": 784.0591008499545,
+      "doom": 0.025936808381864747,
+      "escape": 0.027191475660534765,
+      "doom_given_escape": 0.9538580658757325,
+      "research_cycles": 17.247134252585447,
+      "delegated_cycles": 12.334790876577248,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 6843,
+        "mixed_state_games": 26,
+        "max_deviation_gain": 1.4210854715202004e-14,
+        "state_games": 75625
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 28.0,
+      "ai_ceiling": 200.0
+    },
+    "25 years, high-risk pure selection": {
+      "V1": 103.97515571141886,
+      "V2": 103.97515633707407,
+      "W1": 387.11133456241896,
+      "W2": 387.1113345498528,
+      "welfare": 774.2226691122718,
+      "doom": 0.04581324937916385,
+      "escape": 0.04799868553412024,
+      "doom_given_escape": 0.9544688332474678,
+      "research_cycles": 16.75293120151216,
+      "delegated_cycles": 11.843077704366786,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 153,
+        "mixed_state_games": 15,
+        "max_deviation_gain": 1.4210854715202004e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, half capability mesh": {
+      "V1": 104.11347682086807,
+      "V2": 104.11347682086804,
+      "W1": 387.47199304348266,
+      "W2": 387.4719930434826,
+      "welfare": 774.9439860869652,
+      "doom": 0.04353024915076943,
+      "escape": 0.04561436050663584,
+      "doom_given_escape": 0.9543101923885743,
+      "research_cycles": 16.636660097212328,
+      "delegated_cycles": 11.25544014911204,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 530,
+        "mixed_state_games": 66,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 70225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, double capability ceiling": {
+      "V1": 104.11884857819983,
+      "V2": 104.17998975773975,
+      "W1": 387.4278615772105,
+      "W2": 387.46922549266026,
+      "welfare": 774.8970870698707,
+      "doom": 0.04358463755958079,
+      "escape": 0.045759950508270766,
+      "doom_given_escape": 0.9524625152665581,
+      "research_cycles": 16.437352922402336,
+      "delegated_cycles": 11.28901504323413,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 180,
+        "mixed_state_games": 26,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 75625
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 28,
+      "ai_ceiling": 200
+    },
+    "25 years, zero terminal values": {
+      "V1": 93.05568434037396,
+      "V2": 93.08409423700807,
+      "W1": 347.6519705281101,
+      "W2": 347.66874441644717,
+      "welfare": 695.3207149445573,
+      "doom": 0.04025467170477104,
+      "escape": 0.042430955311653605,
+      "doom_given_escape": 0.9487100021458896,
+      "research_cycles": 15.398180267875109,
+      "delegated_cycles": 10.466898097953129,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 100,
+        "mixed_state_games": 8,
+        "max_deviation_gain": 1.4210854715202004e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, long terminal values": {
+      "V1": 138.33975158588208,
+      "V2": 138.3065593090197,
+      "W1": 508.65160606616996,
+      "W2": 508.5746872909675,
+      "welfare": 1017.2262933571375,
+      "doom": 0.04107765370754396,
+      "escape": 0.05646335133857619,
+      "doom_given_escape": 0.7275100172716704,
+      "research_cycles": 19.316183440535305,
+      "delegated_cycles": 13.926333665274244,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 376,
+        "mixed_state_games": 76,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, no containment": {
+      "V1": 103.98007976905485,
+      "V2": 104.0412446629883,
+      "W1": 386.87327393890763,
+      "W2": 386.9146472651237,
+      "welfare": 773.7879212040314,
+      "doom": 0.04574187523757628,
+      "escape": 0.04574189377041191,
+      "doom_given_escape": 0.9999995948389081,
+      "research_cycles": 16.43738571474362,
+      "delegated_cycles": 11.284544539971346,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 169,
+        "mixed_state_games": 29,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, no positional prize": {
+      "V1": 105.25852687351045,
+      "V2": 105.25852687351056,
+      "W1": 388.8281677247131,
+      "W2": 388.82816772471335,
+      "welfare": 777.6563354494265,
+      "doom": 0.03000549084774147,
+      "escape": 0.032105404943218396,
+      "doom_given_escape": 0.934593128503103,
+      "research_cycles": 12.830174091371333,
+      "delegated_cycles": 7.92099954907867,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 2,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, low research feedback": {
+      "V1": 101.29602237237029,
+      "V2": 101.3609382127772,
+      "W1": 381.1617416065438,
+      "W2": 381.2037687743673,
+      "welfare": 762.365510380911,
+      "doom": 0.03871141307179679,
+      "escape": 0.04356650905756812,
+      "doom_given_escape": 0.8885589850828791,
+      "research_cycles": 16.286193049440296,
+      "delegated_cycles": 10.745680501241347,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 20,
+        "mixed_state_games": 6,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 18225
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "25 years, high research feedback": {
+      "V1": 108.7739760278297,
+      "V2": 108.7739760278297,
+      "W1": 397.2042395559863,
+      "W2": 397.20423955598636,
+      "welfare": 794.4084791119726,
+      "doom": 0.03692184520221442,
+      "escape": 0.03785536901240337,
+      "doom_given_escape": 0.9753397249969198,
+      "research_cycles": 13.970905627771298,
+      "delegated_cycles": 9.340359764695275,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 41,
+        "mixed_state_games": 2,
+        "max_deviation_gain": 0.0,
+        "state_games": 308025
+      },
+      "grid_expansions": 2,
+      "capability_ceiling": 56.0,
+      "ai_ceiling": 400.0
+    },
+    "bridge, half cost slope": {
+      "V1": 78.30867198472886,
+      "V2": 78.30867198472889,
+      "W1": 274.95981164467764,
+      "W2": 274.95981164467764,
+      "welfare": 549.9196232893553,
+      "doom": 0.0,
+      "escape": 0.008103632919196902,
+      "doom_given_escape": 0.0,
+      "research_cycles": 4.0,
+      "delegated_cycles": 2.0,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 1,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 123210
+      },
+      "grid_expansions": 2,
+      "capability_ceiling": 56.0,
+      "ai_ceiling": 400.0
+    },
+    "bridge, double finance": {
+      "V1": 73.29635255305969,
+      "V2": 73.29635255305969,
+      "W1": 263.87617790781917,
+      "W2": 263.87617790781917,
+      "welfare": 527.7523558156383,
+      "doom": 0.0,
+      "escape": 0.0,
+      "doom_given_escape": null,
+      "research_cycles": 2.0,
+      "delegated_cycles": 0.0,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 7290
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    },
+    "bridge, ready to delegate": {
+      "V1": 77.25431761902742,
+      "V2": 77.25431761902742,
+      "W1": 271.5126963455825,
+      "W2": 271.5126963455825,
+      "welfare": 543.025392691165,
+      "doom": 0.0,
+      "escape": 0.0081036329191969,
+      "doom_given_escape": 0.0,
+      "research_cycles": 2.0,
+      "delegated_cycles": 2.0,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 30250
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 28.0,
+      "ai_ceiling": 200.0
+    },
+    "bridge, higher market scale": {
+      "V1": 118.38520100968908,
+      "V2": 118.38520100968908,
+      "W1": 354.05387482107795,
+      "W2": 354.05387482107795,
+      "welfare": 708.1077496421559,
+      "doom": 0.0,
+      "escape": 0.0,
+      "doom_given_escape": null,
+      "research_cycles": 2.0,
+      "delegated_cycles": 0.0,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 7290
+      },
+      "grid_expansions": 0,
+      "capability_ceiling": 14.0,
+      "ai_ceiling": 100.0
+    }
+  },
+  "prisoners_dilemma": {
+    "baseline": 10.0,
+    "q": 0.1,
+    "benefit": 1.5,
+    "cost": 0.1,
+    "both_pause": 10.0,
+    "launch_against_pause": 10.25,
+    "pause_against_launch": 9.0,
+    "both_launch": 9.215000000000002,
+    "doom_both_launch": 0.18999999999999995
+  },
+  "autonomous_continuation": [
+    {
+      "years": 5,
+      "containment": 0,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 2.0
+    },
+    {
+      "years": 5,
+      "containment": 0.01,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 1.97794474236935
+    },
+    {
+      "years": 5,
+      "containment": 0.08,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 0.9376959373542876
+    },
+    {
+      "years": 5,
+      "containment": 0.2,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 0.0
+    },
+    {
+      "years": 10,
+      "containment": 0,
+      "capability": 3,
+      "doom": 1.0,
+      "seizures": 4.0
+    },
+    {
+      "years": 10,
+      "containment": 0.01,
+      "capability": 3,
+      "doom": 0.9774861223263756,
+      "seizures": 3.9362814196749576
+    },
+    {
+      "years": 10,
+      "containment": 0.08,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 2.6949154636141683
+    },
+    {
+      "years": 10,
+      "containment": 0.2,
+      "capability": 3,
+      "doom": 0.0,
+      "seizures": 0.9262118839785164
+    },
+    {
+      "years": 25,
+      "containment": 0,
+      "capability": 3,
+      "doom": 1.0,
+      "seizures": 5.0
+    },
+    {
+      "years": 25,
+      "containment": 0.01,
+      "capability": 3,
+      "doom": 0.9774861223263756,
+      "seizures": 4.913767542001332
+    },
+    {
+      "years": 25,
+      "containment": 0.08,
+      "capability": 3,
+      "doom": 0.8717935201403517,
+      "seizures": 4.4719913135422535
+    },
+    {
+      "years": 25,
+      "containment": 0.2,
+      "capability": 3,
+      "doom": 0.8668840504645544,
+      "seizures": 4.436110695603231
+    }
+  ],
+  "sweep_max_boundary": 0.0
+}

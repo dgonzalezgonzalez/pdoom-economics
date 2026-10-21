@@ -10,6 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    manifest_path=ROOT/'review/manifest.json'
+    if manifest_path.exists() and json.loads(manifest_path.read_text()).get('submission_count',0)>=1:
+        raise RuntimeError('The single authorized review was already submitted. Preserve its frozen inputs and completed report.')
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     results=json.loads((ROOT/'output/model_results.json').read_text())
     context={'reviewed_commit':commit,'repository':'https://github.com/dgonzalezgonzalez/pdoom-economics',

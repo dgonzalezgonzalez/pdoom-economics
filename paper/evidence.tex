@@ -27,6 +27,8 @@ Notes: Except for the ties specification, observations are decisive first-round 
 
 The principal quadratic coefficient is negative, but its approximate 95 percent interval is $[-0.212,0.011]$. The broader matching specification is much closer to linear. On identical comparisons, the GPQA coefficient is positive while ECI gives negative curvature. This contrast reflects sensitivity to the capability scale as well as model support. Coding prompts have more negative ECI curvature in this sample, but do not measure AI research productivity or demand for autonomous coding products. Appendix~\ref{app:empirical} reports family exclusions.
 
+The principal matching rules retain 37,799 first-round comparisons before outcome exclusions. Removing 5,847 ties and 4,481 both-bad responses leaves 20.25 percent of the raw observations. The estimand concerns decisive votes among matched models, rather than representative consumer demand. Model-level comparison counts are provided in the replication. A dyadic covariance sensitivity permitting shared-model dependence raises the linear and quadratic standard errors to 0.145 and 0.158; the quadratic normal interval becomes approximately $[-0.411,0.210]$. Neither covariance accounts for uncertainty in capability scores. Appendix~\ref{app:empirical} documents this calculation and fitted support.
+
 The preliminary finding by \citet{fradkin2026} that ten Artificial Analysis index points are associated with about seven percentage points of additional preference probability is likewise descriptive. The current analysis uses ECI and a frozen public battle sample; it is a related independent exercise, rather than an exact reproduction of that estimate. Neither analysis establishes decreasing financial returns to frontier developers.
 
 \begin{figure}[htbp]\centering
@@ -47,7 +49,7 @@ The highest retrospectively measured ECI among models released by October 21, 20
 \subsection{Calibration bridges and unidentified parameters}
 The structural reference uses normalized assumptions to reveal the mechanism. Commercial benefit scale, private and social life values, financial capacity, safety effectiveness, and containment are assumptions, listed in Appendix~\ref{app:parameters}. A separate empirical-bridge exercise replaces two technology parameters.
 
-First posit productive capability $a=\exp[(E-E_0)/10]$, with ECI $E$ and reference frontier $E_0$. The log-cost slope becomes an elasticity of training-cost levels with respect to $a$. Equating it with the research-cost exponent gives $\gamma=\CostSlope$. That equality is a bridge, not an identified marginal-cost relationship.
+First posit productive capability $a=\exp[(E-E_0)/10]$, with ECI $E$ and reference frontier $E_0=168.83$, the retrospective October 2026 frontier. Thus $a=1$ represents that reference, not the least capable model. The assumed delegation and acquisition requirements $a_L=2$ and $a_S=2.5$ correspond to about 175.76 and 177.99 ECI points under this mapping. Neither is a measured danger threshold. The log-cost slope becomes an elasticity of training-cost levels with respect to $a$. Equating it with the research-cost exponent gives $\gamma=\CostSlope$. That equality is a bridge, not an identified marginal-cost relationship, and extrapolates beyond the cost sample's ECI range of 96.62--146.24.
 
 Second, the reference-state research increment below is $\eta/(1+1/B_R)$ at unit input. Matching \FrontierDrift\ ECI points over one year, with $B_R=20$, gives
 \begin{equation}
@@ -55,11 +57,21 @@ Second, the reference-state research increment below is $\eta/(1+1/B_R)$ at unit
 \end{equation}
 This attributes the entire observed frontier change to the model's research input. It is reported separately from the structural reference, whose $\eta=0.4$, and is not an estimate of autonomous productivity. Sensitivities vary the cost bridge and funding.
 
+The replication also applies the cost bridge and progress bridge separately. With an alternative maintained map $a=\exp[(E-E_0)/s_E]$, the cost elasticity is $(s_E/10)\CostSlope$ and the research coefficient is $1.05[\exp(\FrontierDrift/s_E)-1]$. Choosing $s_E=5$ or $20$ gives approximately $(\gamma,\eta)=(0.927,39.268)$ or $(3.708,1.564)$. Retaining other normalized primitives changes the economic assumption; this is not a consistent change of units of the complete problem in Lemma~\ref{lem:scale}.
+
 No estimate of $\sigma$ in monetary commercial benefits is imported from equation~\eqref{eq:logit}. Latent-choice utility is not a money metric, and empirical curvature is not robust enough to justify that bridge. The quantitative exercise instead sweeps $\sigma$. Research-productivity evidence reviewed by \citet{cunningham2026} motivates separating assistance from difficulty. Its reported uplifts and feedback elasticities do not map directly into this model's delegation multiplier, which remains a scenario assumption.
+
+\begin{table}[htbp]\centering\small
+\caption{Estimated quantities, calibration bridges, and assumptions}\label{tab:identification}
+\input{../output/tables/identification.tex}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.4em}
+Notes: Research feedback is motivated by the literature, rather than numerically estimated from its reported uplifts. No numerical loss-of-control or containment probability is imported from the literature. Preference coefficients do not calibrate commercial curvature. The complete normalized reference is in Appendix~\ref{app:parameters} and the parameter file.
+\end{minipage}
+\end{table}
 
 \section{Quantitative analysis}\label{sec:quant}
 \subsection{Specialization and computation}
-The controlled actions are hold, supervised research, and delegated research with low or high safety. Research input is zero for hold and one otherwise. Safety input is one only for high safety. Positive research targets
+The controlled actions are hold, supervised research, and delegated research with low or high safety. Research input is zero for hold and a fixed project size $e_P=1$ otherwise; sensitivities use $e_P=0.25$. This changes the common project size, rather than allowing every intermediate input. Safety input is one only for high safety. Positive research targets
 \begin{equation}\label{eq:technology}
  a'=a+\eta m_d e^\alpha\frac{a^{\phi-\psi}}{1+a/B_R},\qquad
  m_d=\begin{cases}1,&\text{supervised},\\\mu_D,&\text{delegated}.
@@ -69,9 +81,13 @@ Here $\alpha$ is the effort elasticity, $\phi$ the AI assistance exponent, $\psi
 
 The autonomous system uses equation~\eqref{eq:technology} with $m_d=1$ and chooses $e\in\{0,k/2,k\}$ and $y\in\{0,1\}$ subject to equation~\eqref{eq:AIbudget}. Its reward is $u_A(a)=a$, terminal reward $\tau_Aa$, and acquisition requires $a\geq a_S$. Containment probability for a positive acquisition attempt while humans live is $\rho_0\exp[-\lambda_\rho\max(a-a_S,0)]$. The reference has integer stocks $\bar K=6$, $k_0=1$, subsistence $\underline H=2$, acquisition cost $\kappa_y=0.5$, and production elasticity $\nu=1$. These are normalized resources, not estimates of humanity's energy requirements.
 
-Capability targets are projected linearly onto adjacent grid points. This preserves the mean of an interior target; its randomness is numerical rather than technological uncertainty. Human survival and resources are never interpolated across subsistence. Targets exceeding a computational ceiling are clipped and counted. The implementation expands ceilings until their initial-state probability is below $10^{-9}$; it also refines the capability mesh. Ceilings are computational, not economic stopping assumptions.
+The autonomous effort menu can impose a larger research sacrifice than the explicit acquisition cost: at $k=4$, acquisition permits input $3.5$ under the budget, but the reference menu permits only $2$ rather than $4$. A sensitivity adds the affordable boundary $e=k-\kappa_y y$ to the menu. Controlled safety infrastructure has its own coefficient $\kappa_s=0.5$, separate from acquisition cost, so varying one does not silently vary the other.
 
-After solving the autonomous problem, I solve development games backward. If a stage game has pure equilibria, the reference selects the one with lowest extinction probability, breaking ties by joint developer payoff and then action order. Without pure equilibria, linear feasibility programs enumerate supports, verify mixed equilibria, and select a lowest-risk representative among returned supports. Mixed equilibria coexisting with pure equilibria are not enumerated. Reversing the risk preference among pure equilibria provides an equilibrium sensitivity, not a bound on the full correspondence. Government equilibria are computed separately.
+Capability targets are projected linearly onto adjacent grid points. This preserves the mean of an interior target; its randomness is numerical rather than technological uncertainty. Human survival and resources are never interpolated across subsistence. Before solving, an analytic envelope bounds capability along every feasible action path from the initial state, including all deviations. The grids are expanded to contain that envelope, as described in Appendix~\ref{app:domain}. Zero clipping on a selected path alone would be insufficient: a low ceiling can deter a profitable research deviation and create apparent stopping. The replication includes a regression test for that failure and a separate mesh refinement. Ceilings do not supply the reported economic stopping mechanism.
+
+The conditional kernels in equation~\eqref{eq:Q} match the implementation. On the no-failure branch, each developer's target is independently projected onto the controlled capability grid, defining $P_0$. On branch $j$, the selected system's same unrounded research target is projected directly onto the autonomous grid with resources $k_0$, defining $P_j$. It is not first rounded onto the controlled grid and then rounded again. These branch-specific numerical kernels have the same target mean on their respective interior grids, but need not have identical higher moments. Autonomous continuation uses its own grid at subsequent transitions. Mesh sensitivity is therefore required even when the domain certificate holds.
+
+After solving the autonomous problem, I solve development games backward. If a stage game has pure equilibria, the reference selects the one with lowest extinction probability, breaking ties by joint developer payoff and then action order. Without pure equilibria, the solver first checks nonsingular equal-size mixed supports, stopping at the smallest size with verified equilibria. If none are found, linear feasibility programs inspect all support pairs, including unequal sizes, returning one representative per feasible support. The risk rule applies only to returned candidates. Neither procedure parameterizes continua within a degenerate support. Mixed equilibria coexisting with pure equilibria are not enumerated. Reversing the risk preference provides a selection sensitivity, not a minimum or maximum over the full equilibrium correspondence. Government support pairs are inspected separately without the fast shortcut.
 
 Terminal developer and jurisdiction values are $\tau_H$ times their current gross surviving-state flow, without research costs. The reference uses $\tau_H=5$ and $\tau_A=1$. These are continuation approximations, not a claim that humans or AI cease to exist at $T$. Extinction probabilities count transitions only through $T$. Zero and longer terminal values assess the effect of this approximation.
 
@@ -84,7 +100,15 @@ Notes: Probabilities are model outputs, not estimated real-world risks. Policies
 \end{minipage}
 \end{table}
 
-The structural reference separates loss of control from extinction within a reporting horizon. At ten years, loss of control can occur without sufficient subsequent acquisition to breach subsistence before the horizon. That is not permanent safety. With twenty-five years, open development produces loss-of-control probability \LongEscape\ percent and extinction probability \LongDoom\ percent in the selected equilibrium. These probabilities are conditional on an arbitrary control-failure probability and a stylized acquisition technology.
+The structural reference separates loss of control from extinction within a planning horizon. At ten years, loss of control can occur without sufficient subsequent acquisition to breach subsistence before the horizon. That is not permanent safety. With twenty-five years, open development produces loss-of-control probability \LongEscape\ percent and extinction probability \LongDoom\ percent in the selected equilibrium. These probabilities are conditional on an arbitrary control-failure probability and a stylized acquisition technology. Changing the planning horizon re-solves both developers' and the autonomous system's decisions; these rows are not cumulative risks along one fixed equilibrium.
+
+\begin{table}[htbp]\centering\small
+\caption{Cumulative risk under the fixed twenty-five-year open equilibrium}\label{tab:fixedrisk}
+\input{../output/tables/fixed_horizon_risk.tex}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.4em}
+Notes: All rows follow the same development and autonomous policies optimized with a twenty-five-year planning horizon. Only the reporting date changes. Undiscounted recursions carry the probability of absorption within each reporting window while preserving the original remaining-horizon policies.
+\end{minipage}
+\end{table}
 
 \begin{table}[htbp]\centering\small
 \caption{Government payoffs: selected twenty-five-year continuations}\label{tab:governments}
@@ -96,9 +120,34 @@ Notes: Each cell reports jurisdiction values $(W_1,W_2)$ in normalized units. Th
 
 Table~\ref{tab:governments} verifies a coordination failure within the selected long-horizon continuations: both governments prefer a mutual ban to mutual open development, but each prefers open delegation against either choice of the other. This is an explicit government-policy prisoner's dilemma under diminishing commercial marginal benefits, $\sigma=1.3$. In the full three-policy menu, open and the safety standard can be payoff-equivalent at this horizon because the excluded low-safety action is not selected on the relevant path. At ten years the selected government equilibrium instead has both jurisdictions adopting the safety standard. Under the empirical bridges the baseline has no delegated cycles, making policies payoff-equivalent. Those differences are scenario outcomes, rather than country-specific predictions.
 
-Standards and bans change the timing and amount of research as well as safety. Their welfare effects must therefore be evaluated in the complete game. The planner's weak welfare advantage follows from Proposition~\ref{prop:planner}; its risk ranking does not. The empirical bridges can produce a different development path because faster initial growth is combined with a steeper research-cost schedule. This contrast demonstrates sensitivity to how measured capability maps into productive technology.
+Standards and bans change the timing and amount of research as well as safety. Their welfare effects must therefore be evaluated in the complete game. The planner's weak welfare advantage follows from Proposition~\ref{prop:planner}; its risk ranking does not. Under the empirical bridges, each developer initially undertakes one large supervised research project. At the resulting capability, another unit project is unaffordable under the assumed financing constraint. Delegation was unavailable before that first jump. The absence of delegation therefore reflects the joint assumptions about project size, funding, the launch threshold, and the cost bridge; it is not empirical validation of safe commercial saturation. A divisible-input specification could permit smaller subsequent projects. This contrast demonstrates sensitivity to how measured capability maps into productive technology.
 
-Figure~\ref{fig:scenarios} varies commercial curvature and control-failure probability. The replication distinguishes zero-research stopping, controlled innovation without delegation, delegation exposure without extinction by $T$, and positive extinction probability. Positive risk with $\sigma>0$ disproves sufficiency of diminishing returns within that scenario. Zero risk remains conditional on horizon, financing, delegation requirements, and autonomous choices. The parameter sweep is a scenario envelope, not a statistically identified set for real-world risk.
+At the unrounded first target $a'=6.197$, the next unit project costs about $7.353$, while available funding is about $2.055$. Its neighboring controlled-grid states also exclude the project. Quarter-size projects instead permit delegation, and the twenty-five-year bridge sensitivity has positive extinction probability. This is a financing comparison, rather than a test that feasible research has a negative private payoff.
+
+The distinction persists in a smooth counterpart. In a final-period supervised comparison with no rival delegation, positive terminal continuation, positive financing, no fixed cost, and $0<\alpha<1$, a small input gives a positive continuation gain of order $e^\alpha$ and a cost of order $e$. Since $R'_\sigma(a)>0$, the ratio of net gain to $e^\alpha$ tends to a positive constant. Holding cannot be optimal in that comparison. Exact cessation therefore requires an explicit restriction such as project indivisibility, fixed costs, satiation, or exhausted finance; falling growth alone is insufficient.
+
+\subsection{Evaluating the certificate and welfare accounting}
+\begin{table}[htbp]\centering\small
+\caption{Delegated-deviation margins against the restricted equilibrium}\label{tab:certificate}
+\input{../output/tables/certificates.tex}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.4em}
+Notes: $\Delta_{\max}$ is the maximum delegated one-period deviation gain against the no-delegation equilibrium. Full-grid rows cover every state/date of the finite computational game. Action-reachable rows restrict to controlled states reachable from the initial state under any feasible action history at that date. This envelope includes deviations. Empty means no delegated action is feasible in that domain. A positive margin rejects the specified restricted continuation there; it does not characterize every equilibrium.
+\end{minipage}
+\end{table}
+
+The code evaluates Theorem~\ref{thm:certificate} using the restricted continuation, rather than inferring it from the unrestricted solution. It reports binding states, time, financing slack, and the decomposition $N-\beta qH$. The reference fails the certificate. The bridge can have positive full-grid margins at states absent from every initial-state history, while admitting no feasible delegated deviation in its action-reachable tree. Global sequential optimality on arbitrary grid states and initial-state safety are therefore distinct statements.
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{Welfare components in the twenty-five-year scenario}\label{tab:welfareparts}
+\resizebox{\textwidth}{!}{\input{../output/tables/welfare_components.tex}}
+\begin{minipage}{\textwidth}\footnotesize\vspace{0.4em}
+Notes: Welfare equals baseline plus surviving task surplus, less real research/safety costs, mortality losses, and nonfatal resource losses. The baseline is the discounted no-loss human flow. Resource loss is the gap between surviving baseline utility and its production-scaled value. Recovery restores pre-failure commercial/task flows only after successful containment, at frozen pre-failure capabilities.
+\end{minipage}
+\end{table}
+
+To obtain this identity, the solver separately propagates discounted human survival and production annuities. Mortality losses are $L$ times the no-loss annuity minus the survival annuity; nonfatal resource losses are $L$ times survival minus production. Surviving task surplus and real development costs are accumulated separately. The identity is checked numerically. A recovery sensitivity restores frozen pre-failure rents and task surplus following successful containment. This makes explicit the baseline restriction that even contained failures permanently destroy the AI sector's extra surplus. Human and autonomous terminal values are also varied separately.
+
+Figure~\ref{fig:scenarios} varies commercial curvature and control-failure probability. The replication distinguishes stopping and controlled innovation within a numerical tolerance, delegation with exactly zero computed extinction by $T$, positive risk below the reporting tolerance, and larger positive risk. The stopping and reporting tolerance is $10^{-8}$; an extremely small positive probability is not classified as exact zero. Positive risk with $\sigma>0$ disproves sufficiency of diminishing returns within that scenario. Zero risk remains conditional on horizon, financing, delegation requirements, and autonomous choices. The parameter sweep is a scenario envelope, not a statistically identified set for real-world risk.
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=\textwidth]{../output/figures/scenarios.pdf}

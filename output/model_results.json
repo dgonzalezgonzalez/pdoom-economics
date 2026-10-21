@@ -46,14 +46,26 @@
           "multiple_pure_state_games": 13,
           "mixed_state_games": 2,
           "max_deviation_gain": 1.4210854715202004e-14,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 509.4664501837295,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 50.741755041657875,
+          "research_safety_cost": 7.535705457064317,
+          "mortality_loss": -1.4210854715202004e-13,
+          "nonfatal_resource_loss": 1.8734906076632996
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/standard": {
         "policies": [
@@ -100,14 +112,26 @@
           "multiple_pure_state_games": 13,
           "mixed_state_games": 2,
           "max_deviation_gain": 1.4210854715202004e-14,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 509.46734881113343,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 50.74321901871147,
+          "research_safety_cost": 7.536227661152316,
+          "mortality_loss": -1.4210854715202004e-13,
+          "nonfatal_resource_loss": 1.8735337532248764
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/ban": {
         "policies": [
@@ -154,14 +178,26 @@
           "multiple_pure_state_games": 10,
           "mixed_state_games": 3,
           "max_deviation_gain": 7.105427357601002e-15,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 506.7191891220667,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 46.28771651821467,
+          "research_safety_cost": 6.775683294505236,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.9267353084417351
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/open": {
         "policies": [
@@ -208,14 +244,26 @@
           "multiple_pure_state_games": 13,
           "mixed_state_games": 2,
           "max_deviation_gain": 1.4210854715202004e-14,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 509.46734881113343,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 50.74321901871147,
+          "research_safety_cost": 7.536227661152315,
+          "mortality_loss": -1.4210854715202004e-13,
+          "nonfatal_resource_loss": 1.8735337532249474
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/standard": {
         "policies": [
@@ -262,14 +310,26 @@
           "multiple_pure_state_games": 13,
           "mixed_state_games": 2,
           "max_deviation_gain": 1.4210854715202004e-14,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 509.4682474401546,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 50.74468299762909,
+          "research_safety_cost": 7.5367498654871214,
+          "mortality_loss": -1.4210854715202004e-13,
+          "nonfatal_resource_loss": 1.8735768987865242
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/ban": {
         "policies": [
@@ -316,14 +376,26 @@
           "multiple_pure_state_games": 10,
           "mixed_state_games": 3,
           "max_deviation_gain": 7.105427357601002e-15,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 506.7193219695911,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 46.28792706525475,
+          "research_safety_cost": 6.775760994020891,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.9267353084417351
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/open": {
         "policies": [
@@ -370,14 +442,26 @@
           "multiple_pure_state_games": 10,
           "mixed_state_games": 3,
           "max_deviation_gain": 7.105427357601002e-15,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 506.71918912206667,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 46.28771651821467,
+          "research_safety_cost": 6.775683294505235,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.9267353084417351
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/standard": {
         "policies": [
@@ -424,14 +508,26 @@
           "multiple_pure_state_games": 10,
           "mixed_state_games": 3,
           "max_deviation_gain": 7.105427357601002e-15,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 506.71932196959114,
         "doom_given_escape": 0.0,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 46.28792706525475,
+          "research_safety_cost": 6.775760994020892,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.9267353084417351
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/ban": {
         "policies": [
@@ -478,14 +574,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 14440
         },
         "welfare": 503.9529538150911,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 42.68530415185125,
+          "research_safety_cost": 6.866241543559243,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 19.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 19.5,
+          "autonomous_all_path_bound": 40.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       }
     },
     "government_equilibria": [
@@ -553,10 +661,22 @@
       },
       "welfare": 509.49923515033777,
       "doom_given_escape": 0.0,
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 50.426240232527974,
+        "research_safety_cost": 7.283129375330876,
+        "mortality_loss": -1.4210854715202004e-13,
+        "nonfatal_resource_loss": 1.7777669136584962
+      },
       "initial_delegate_probability": 0.0,
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 19.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 19.5,
+        "autonomous_all_path_bound": 40.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      }
     }
   },
   "empirical_bridge": {
@@ -606,14 +726,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/standard": {
         "policies": [
@@ -660,14 +792,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/ban": {
         "policies": [
@@ -714,14 +858,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/open": {
         "policies": [
@@ -768,14 +924,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/standard": {
         "policies": [
@@ -822,14 +990,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/ban": {
         "policies": [
@@ -876,14 +1056,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/open": {
         "policies": [
@@ -930,14 +1122,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/standard": {
         "policies": [
@@ -984,14 +1188,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/ban": {
         "policies": [
@@ -1038,14 +1254,26 @@
           "multiple_pure_state_games": 0,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 7290
+          "state_games": 25000
         },
         "welfare": 527.7523558156383,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 468.1338912067991,
+          "task_surplus": 60.11846460883924,
+          "research_safety_cost": 0.5,
+          "mortality_loss": -7.105427357601002e-14,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 25.5,
+        "ai_ceiling": 298.5,
+        "domain_certificate": {
+          "controlled_all_path_bound": 25.5,
+          "autonomous_all_path_bound": 298.5,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       }
     },
     "government_equilibria": [
@@ -1737,10 +1965,22 @@
       },
       "welfare": 527.7523558156383,
       "doom_given_escape": null,
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 60.11846460883924,
+        "research_safety_cost": 0.5,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 0.0
+      },
       "initial_delegate_probability": 0.0,
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 25.5,
+      "ai_ceiling": 298.5,
+      "domain_certificate": {
+        "controlled_all_path_bound": 25.5,
+        "autonomous_all_path_bound": 298.5,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      }
     }
   },
   "sensitivity": {
@@ -1764,51 +2004,87 @@
       },
       "grid_expansions": 0,
       "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 9.5,
+        "autonomous_all_path_bound": 20.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 347.70184191999994,
+        "task_surplus": 29.899681739392825,
+        "research_safety_cost": 4.6235005101656546,
+        "mortality_loss": 0.0,
+        "nonfatal_resource_loss": 0.0
+      }
     },
     "25 years": {
-      "V1": 104.1187464364617,
-      "V2": 104.1798876160016,
-      "W1": 387.42771618057833,
-      "W2": 387.4690800960281,
-      "welfare": 774.8967962766064,
-      "doom": 0.0435854170487665,
-      "escape": 0.04576073138794594,
-      "doom_given_escape": 0.9524632960793881,
-      "research_cycles": 16.43754569947003,
-      "delegated_cycles": 11.289207820301822,
+      "V1": 104.11884857819983,
+      "V2": 104.17998975773975,
+      "W1": 387.4278615772105,
+      "W2": 387.46922549266026,
+      "welfare": 774.8970870698707,
+      "doom": 0.04358463755958079,
+      "escape": 0.045759950508270766,
+      "doom_given_escape": 0.9524625152665581,
+      "research_cycles": 16.437352922402336,
+      "delegated_cycles": 11.28901504323413,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 162,
+        "multiple_pure_state_games": 180,
         "mixed_state_games": 26,
         "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 18225
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 91.9590347190285,
+        "research_safety_cost": 11.220256148380326,
+        "mortality_loss": 15.978723223786773,
+        "nonfatal_resource_loss": 1.5455947905756773
+      }
     },
     "25 years, no acquisition": {
-      "V1": 106.1033511094105,
-      "V2": 106.10335110941055,
-      "W1": 396.44376557281254,
-      "W2": 396.4437655728126,
-      "welfare": 792.8875311456252,
+      "V1": 106.1035672199935,
+      "V2": 106.10356721999355,
+      "W1": 396.44230358880293,
+      "W2": 396.44230358880293,
+      "welfare": 792.8846071776059,
       "doom": 0.0,
-      "escape": 0.050497903949861915,
+      "escape": 0.050485877634794465,
       "doom_given_escape": 0.0,
-      "research_cycles": 17.369065653141696,
-      "delegated_cycles": 12.459888560944766,
+      "research_cycles": 17.36607760400785,
+      "delegated_cycles": 12.456900511810922,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 34,
-        "mixed_state_games": 2,
-        "max_deviation_gain": 0.0,
-        "state_games": 18225
+        "multiple_pure_state_games": 46,
+        "mixed_state_games": 6,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 93.83100570485955,
+        "research_safety_cost": 12.62902504083907,
+        "mortality_loss": -2.8421709430404007e-13,
+        "nonfatal_resource_loss": 0.0
+      }
     },
     "25 years, full common loss shock": {
       "V1": 105.27202480519637,
@@ -1826,33 +2102,57 @@
         "multiple_pure_state_games": 6843,
         "mixed_state_games": 26,
         "max_deviation_gain": 1.4210854715202004e-14,
-        "state_games": 75625
+        "state_games": 115600
       },
       "grid_expansions": 1,
-      "capability_ceiling": 28.0,
-      "ai_ceiling": 200.0
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 95.09224732692937,
+        "research_safety_cost": 12.325049911770945,
+        "mortality_loss": 9.471446096255676,
+        "nonfatal_resource_loss": 0.9192769825332903
+      }
     },
     "25 years, high-risk pure selection": {
-      "V1": 103.97515571141886,
-      "V2": 103.97515633707407,
-      "W1": 387.11133456241896,
-      "W2": 387.1113345498528,
-      "welfare": 774.2226691122718,
-      "doom": 0.04581324937916385,
-      "escape": 0.04799868553412024,
-      "doom_given_escape": 0.9544688332474678,
-      "research_cycles": 16.75293120151216,
-      "delegated_cycles": 11.843077704366786,
+      "V1": 103.97525857110787,
+      "V2": 103.97525919676309,
+      "W1": 387.1114809810393,
+      "W2": 387.1114809684732,
+      "welfare": 774.2229619495124,
+      "doom": 0.04581246441097476,
+      "escape": 0.047997899165667976,
+      "doom_given_escape": 0.9544681164658886,
+      "research_cycles": 16.752737069420913,
+      "delegated_cycles": 11.842883572275536,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 153,
-        "mixed_state_games": 15,
+        "multiple_pure_state_games": 170,
+        "mixed_state_games": 17,
         "max_deviation_gain": 1.4210854715202004e-14,
-        "state_games": 18225
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 93.11163062460065,
+        "research_safety_cost": 11.844173834209721,
+        "mortality_loss": 17.09117718554026,
+        "nonfatal_resource_loss": 1.6359441689236576
+      }
     },
     "25 years, half capability mesh": {
       "V1": 104.11347682086807,
@@ -1867,14 +2167,26 @@
       "delegated_cycles": 11.25544014911204,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 530,
-        "mixed_state_games": 66,
+        "multiple_pure_state_games": 621,
+        "mixed_state_games": 88,
         "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 70225
+        "state_games": 442225
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.0,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.0,
+        "autonomous_all_path_bound": 84.25,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 92.41701396224947,
+        "research_safety_cost": 11.48439516075675,
+        "mortality_loss": 16.13878757876165,
+        "nonfatal_resource_loss": 1.5324716493508106
+      }
     },
     "25 years, double capability ceiling": {
       "V1": 104.11884857819983,
@@ -1892,11 +2204,23 @@
         "multiple_pure_state_games": 180,
         "mixed_state_games": 26,
         "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 75625
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 28,
-      "ai_ceiling": 200
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 200,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 91.9590347190285,
+        "research_safety_cost": 11.220256148380326,
+        "mortality_loss": 15.978723223786773,
+        "nonfatal_resource_loss": 1.5455947905756773
+      }
     },
     "25 years, zero terminal values": {
       "V1": 93.05568434037396,
@@ -1911,58 +2235,230 @@
       "delegated_cycles": 10.466898097953129,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 100,
-        "mixed_state_games": 8,
+        "multiple_pure_state_games": 106,
+        "mixed_state_games": 10,
         "max_deviation_gain": 1.4210854715202004e-14,
-        "state_games": 18225
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 639.6032831419815,
+        "task_surplus": 79.49726969513618,
+        "research_safety_cost": 10.08629011005509,
+        "mortality_loss": 12.241112841550148,
+        "nonfatal_resource_loss": 1.4524349409550297
+      }
     },
     "25 years, long terminal values": {
-      "V1": 138.33975158588208,
-      "V2": 138.3065593090197,
-      "W1": 508.65160606616996,
-      "W2": 508.5746872909675,
-      "welfare": 1017.2262933571375,
-      "doom": 0.04107765370754396,
-      "escape": 0.05646335133857619,
-      "doom_given_escape": 0.7275100172716704,
-      "research_cycles": 19.316183440535305,
-      "delegated_cycles": 13.926333665274244,
+      "V1": 137.7249111896475,
+      "V2": 137.79916982038534,
+      "W1": 507.2794539052639,
+      "W2": 507.33914171491375,
+      "welfare": 1014.6185956201776,
+      "doom": 0.047254604153950955,
+      "escape": 0.059466422165011884,
+      "doom_given_escape": 0.7946434716187454,
+      "research_cycles": 19.818571572305366,
+      "delegated_cycles": 14.66846109769494,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 376,
-        "mixed_state_games": 76,
-        "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 18225
+        "multiple_pure_state_games": 570,
+        "mixed_state_games": 236,
+        "max_deviation_gain": 5.684341886080802e-14,
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 927.9206566283958,
+        "task_surplus": 130.96775362783077,
+        "research_safety_cost": 14.49667506929239,
+        "mortality_loss": 27.662127239055962,
+        "nonfatal_resource_loss": 2.1110123277003368
+      }
+    },
+    "25 years, human terminal only zero": {
+      "V1": 93.05591582624757,
+      "V2": 93.08432572288169,
+      "W1": 347.652905423501,
+      "W2": 347.66967931183797,
+      "welfare": 695.322584735339,
+      "doom": 0.04026278178813113,
+      "escape": 0.04243104462636188,
+      "doom_given_escape": 0.9488991407747799,
+      "research_cycles": 15.398186400771433,
+      "delegated_cycles": 10.466920160596825,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 109,
+        "mixed_state_games": 10,
+        "max_deviation_gain": 1.4210854715202004e-14,
+        "state_games": 115600
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 639.6032831419815,
+        "task_surplus": 79.49730289050252,
+        "research_safety_cost": 10.086307143108113,
+        "mortality_loss": 12.238470641375159,
+        "nonfatal_resource_loss": 1.4532235126616655
+      }
+    },
+    "25 years, AI terminal only zero": {
+      "V1": 104.11864010106378,
+      "V2": 104.17978128060365,
+      "W1": 387.42713660468024,
+      "W2": 387.46850052013,
+      "welfare": 774.8956371248103,
+      "doom": 0.043578412527217295,
+      "escape": 0.04576221221350797,
+      "doom_given_escape": 0.9522794117534801,
+      "research_cycles": 16.437797306230255,
+      "delegated_cycles": 11.289572952110301,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 185,
+        "mixed_state_games": 30,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 115600
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 91.95976272148468,
+        "research_safety_cost": 11.220571439875103,
+        "mortality_loss": 15.98126933406661,
+        "nonfatal_resource_loss": 1.5449113363177958
+      }
+    },
+    "25 years, post-containment recovery": {
+      "V1": 104.14000234519021,
+      "V2": 104.16958649911375,
+      "W1": 387.48170453936063,
+      "W2": 387.51629337547774,
+      "welfare": 774.9979979148384,
+      "doom": 0.04347603312194724,
+      "escape": 0.045647887502372475,
+      "doom_given_escape": 0.9524215796336171,
+      "research_cycles": 16.503695664195423,
+      "delegated_cycles": 11.261334249824284,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 164,
+        "mixed_state_games": 25,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 115600
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 92.07820119156274,
+        "research_safety_cost": 11.279281243061792,
+        "mortality_loss": 15.941511987693815,
+        "nonfatal_resource_loss": 1.5420365595538499
+      }
+    },
+    "25 years, acquisition budget boundary": {
+      "V1": 104.11210641096955,
+      "V2": 104.17324860706405,
+      "W1": 387.40108236855764,
+      "W2": 387.4424466851283,
+      "welfare": 774.8435290536859,
+      "doom": 0.04357485596433458,
+      "escape": 0.04574091212704507,
+      "doom_given_escape": 0.9526451034318186,
+      "research_cycles": 16.43708641693146,
+      "delegated_cycles": 11.28430192370966,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 165,
+        "mixed_state_games": 30,
+        "max_deviation_gain": 2.842170943040401e-14,
+        "state_games": 115600
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 91.95147132787416,
+        "research_safety_cost": 11.217860103141948,
+        "mortality_loss": 16.05563943866116,
+        "nonfatal_resource_loss": 1.5170692459702195
+      }
     },
     "25 years, no containment": {
-      "V1": 103.98007976905485,
-      "V2": 104.0412446629883,
-      "W1": 386.87327393890763,
-      "W2": 386.9146472651237,
-      "welfare": 773.7879212040314,
-      "doom": 0.04574187523757628,
-      "escape": 0.04574189377041191,
-      "doom_given_escape": 0.9999995948389081,
-      "research_cycles": 16.43738571474362,
-      "delegated_cycles": 11.284544539971346,
+      "V1": 103.98018197959946,
+      "V2": 104.04134687353293,
+      "W1": 386.8734196346216,
+      "W2": 386.9147929608377,
+      "welfare": 773.7882125954593,
+      "doom": 0.04574109432463232,
+      "escape": 0.04574111285746796,
+      "doom_given_escape": 0.9999995948319906,
+      "research_cycles": 16.437192928432786,
+      "delegated_cycles": 11.28435175366051,
       "boundary_probability": 0.0,
       "diagnostics": {
-        "multiple_pure_state_games": 169,
+        "multiple_pure_state_games": 189,
         "mixed_state_games": 29,
         "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 18225
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 91.951794861481,
+        "research_safety_cost": 11.217964014803595,
+        "mortality_loss": 17.072741705542143,
+        "nonfatal_resource_loss": 1.5555030592608432
+      }
     },
     "25 years, no positional prize": {
       "V1": 105.25852687351045,
@@ -1980,11 +2476,23 @@
         "multiple_pure_state_games": 2,
         "mixed_state_games": 0,
         "max_deviation_gain": 0.0,
-        "state_games": 18225
+        "state_games": 115600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 86.42269551031212,
+        "research_safety_cost": 7.336938657218263,
+        "mortality_loss": 11.974201665870368,
+        "nonfatal_resource_loss": 1.1378462513819443
+      }
     },
     "25 years, low research feedback": {
       "V1": 101.29602237237029,
@@ -2002,11 +2510,23 @@
         "multiple_pure_state_games": 20,
         "mixed_state_games": 6,
         "max_deviation_gain": 2.842170943040401e-14,
-        "state_games": 18225
+        "state_games": 67600
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 26.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 26.5,
+        "autonomous_all_path_bound": 58.25,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 74.4733577348932,
+        "research_safety_cost": 8.737008591738118,
+        "mortality_loss": 13.34909109905766,
+        "nonfatal_resource_loss": 1.7043741767714948
+      }
     },
     "25 years, high research feedback": {
       "V1": 108.7739760278297,
@@ -2024,11 +2544,23 @@
         "multiple_pure_state_games": 41,
         "mixed_state_games": 2,
         "max_deviation_gain": 0.0,
-        "state_games": 308025
+        "state_games": 168100
       },
-      "grid_expansions": 2,
-      "capability_ceiling": 56.0,
-      "ai_ceiling": 400.0
+      "grid_expansions": 1,
+      "capability_ceiling": 41.5,
+      "ai_ceiling": 355.25,
+      "domain_certificate": {
+        "controlled_all_path_bound": 41.5,
+        "autonomous_all_path_bound": 355.25,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 110.25989595814661,
+        "research_safety_cost": 11.492188949160559,
+        "mortality_loss": 14.730762549528151,
+        "nonfatal_resource_loss": 1.3110918610702527
+      }
     },
     "bridge, half cost slope": {
       "V1": 78.30867198472886,
@@ -2046,11 +2578,23 @@
         "multiple_pure_state_games": 1,
         "mixed_state_games": 0,
         "max_deviation_gain": 0.0,
-        "state_games": 123210
+        "state_games": 73960
       },
-      "grid_expansions": 2,
-      "capability_ceiling": 56.0,
-      "ai_ceiling": 400.0
+      "grid_expansions": 1,
+      "capability_ceiling": 43.5,
+      "ai_ceiling": 316.5,
+      "domain_certificate": {
+        "controlled_all_path_bound": 43.5,
+        "autonomous_all_path_bound": 316.5,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 86.72263311571261,
+        "research_safety_cost": 3.390960175745671,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 1.5459408574106703
+      }
     },
     "bridge, double finance": {
       "V1": 73.29635255305969,
@@ -2068,11 +2612,23 @@
         "multiple_pure_state_games": 0,
         "mixed_state_games": 0,
         "max_deviation_gain": 0.0,
-        "state_games": 7290
+        "state_games": 26010
       },
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 26.0,
+      "ai_ceiling": 299.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 26.0,
+        "autonomous_all_path_bound": 299.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 60.11846460883924,
+        "research_safety_cost": 0.5,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 0.0
+      }
     },
     "bridge, ready to delegate": {
       "V1": 77.25431761902742,
@@ -2090,11 +2646,23 @@
         "multiple_pure_state_games": 0,
         "mixed_state_games": 0,
         "max_deviation_gain": 0.0,
-        "state_games": 30250
+        "state_games": 25000
       },
       "grid_expansions": 1,
-      "capability_ceiling": 28.0,
-      "ai_ceiling": 200.0
+      "capability_ceiling": 25.5,
+      "ai_ceiling": 298.5,
+      "domain_certificate": {
+        "controlled_all_path_bound": 25.5,
+        "autonomous_all_path_bound": 298.5,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 77.4091482610546,
+        "research_safety_cost": 0.8,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 1.7176467766886816
+      }
     },
     "bridge, higher market scale": {
       "V1": 118.38520100968908,
@@ -2112,11 +2680,159 @@
         "multiple_pure_state_games": 0,
         "mixed_state_games": 0,
         "max_deviation_gain": 0.0,
+        "state_games": 39690
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 32.0,
+      "ai_ceiling": 305.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 32.0,
+        "autonomous_all_path_bound": 305.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 240.47385843535696,
+        "research_safety_cost": 0.5,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 0.0
+      }
+    },
+    "bridge, quarter-size projects": {
+      "V1": 74.63363883841807,
+      "V2": 74.63363883841807,
+      "W1": 267.0298083708121,
+      "W2": 267.0298083708121,
+      "welfare": 534.0596167416242,
+      "doom": 0.0,
+      "escape": 0.018162036510119973,
+      "doom_given_escape": 0.0,
+      "research_cycles": 4.950176634806827,
+      "delegated_cycles": 1.9979746086502694,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 15210
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 20.0,
+      "ai_ceiling": 293.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 20.0,
+        "autonomous_all_path_bound": 293.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 72.1540768069048,
+        "research_safety_cost": 3.048194280394868,
+        "mortality_loss": 0.0,
+        "nonfatal_resource_loss": 3.1801569916847683
+      }
+    },
+    "bridge, quarter-size projects, 25 years": {
+      "V1": 115.10825968151897,
+      "V2": 115.10825968151897,
+      "W1": 407.34869777610504,
+      "W2": 407.348697776105,
+      "welfare": 814.6973955522101,
+      "doom": 0.018157222995826915,
+      "escape": 0.018162036510119973,
+      "doom_given_escape": 0.9997349683615945,
+      "research_cycles": 4.950176634806827,
+      "delegated_cycles": 1.9979746086502694,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 38025
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 20.0,
+      "ai_ceiling": 701.75,
+      "domain_certificate": {
+        "controlled_all_path_bound": 20.0,
+        "autonomous_all_path_bound": 701.75,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 115.3132647411264,
+        "research_safety_cost": 3.048194280394868,
+        "mortality_loss": 8.542108033611555,
+        "nonfatal_resource_loss": 0.7081933884950331
+      }
+    },
+    "cost bridge only": {
+      "V1": 65.76075696060133,
+      "V2": 65.76075696060133,
+      "W1": 250.2648328853084,
+      "W2": 250.2648328853084,
+      "welfare": 500.5296657706168,
+      "doom": 0.0,
+      "escape": 0.008119647619558051,
+      "doom_given_escape": 0.0,
+      "research_cycles": 6.907364308381803,
+      "delegated_cycles": 1.9979654144243422,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
         "state_games": 7290
       },
       "grid_expansions": 0,
       "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 6.5,
+        "autonomous_all_path_bound": 27.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 36.64198598246947,
+        "research_safety_cost": 3.6951986894252555,
+        "mortality_loss": 0.0,
+        "nonfatal_resource_loss": 0.5510127292264855
+      }
+    },
+    "progress bridge only": {
+      "V1": 78.57767569136938,
+      "V2": 78.57767569136938,
+      "W1": 275.2288153513182,
+      "W2": 275.2288153513182,
+      "welfare": 550.4576307026364,
+      "doom": 0.0,
+      "escape": 0.008103632919196902,
+      "doom_given_escape": 0.0,
+      "research_cycles": 4.0,
+      "delegated_cycles": 2.0,
+      "boundary_probability": 0.0,
+      "diagnostics": {
+        "multiple_pure_state_games": 0,
+        "mixed_state_games": 0,
+        "max_deviation_gain": 0.0,
+        "state_games": 121000
+      },
+      "grid_expansions": 1,
+      "capability_ceiling": 55.5,
+      "ai_ceiling": 328.5,
+      "domain_certificate": {
+        "controlled_all_path_bound": 55.5,
+        "autonomous_all_path_bound": 328.5,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      },
+      "welfare_components": {
+        "baseline_no_loss": 468.1338912067991,
+        "task_surplus": 86.72263311571261,
+        "research_safety_cost": 2.8529527624646653,
+        "mortality_loss": -7.105427357601002e-14,
+        "nonfatal_resource_loss": 1.5459408574106703
+      }
     }
   },
   "long_policy": {
@@ -2127,15 +2843,15 @@
           "open"
         ],
         "planner": false,
-        "V1": 104.1187464364617,
-        "V2": 104.1798876160016,
-        "W1": 387.42771618057833,
-        "W2": 387.4690800960281,
-        "doom": 0.0435854170487665,
-        "escape": 0.04576073138794594,
+        "V1": 104.11884857819983,
+        "V2": 104.17998975773975,
+        "W1": 387.4278615772105,
+        "W2": 387.46922549266026,
+        "doom": 0.04358463755958079,
+        "escape": 0.045759950508270766,
         "boundary_probability": 0.0,
-        "research_cycles": 16.43754569947003,
-        "delegated_cycles": 11.289207820301822,
+        "research_cycles": 16.437352922402336,
+        "delegated_cycles": 11.28901504323413,
         "initial_action_joint": [
           [
             0.0,
@@ -2163,17 +2879,29 @@
           ]
         ],
         "diagnostics": {
-          "multiple_pure_state_games": 162,
+          "multiple_pure_state_games": 180,
           "mixed_state_games": 26,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
-        "welfare": 774.8967962766064,
-        "doom_given_escape": 0.9524632960793881,
+        "welfare": 774.8970870698707,
+        "doom_given_escape": 0.9524625152665581,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 91.9590347190285,
+          "research_safety_cost": 11.220256148380326,
+          "mortality_loss": 15.978723223786773,
+          "nonfatal_resource_loss": 1.5455947905756773
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/standard": {
         "policies": [
@@ -2181,15 +2909,15 @@
           "standard"
         ],
         "planner": false,
-        "V1": 104.11874643646206,
-        "V2": 104.17988761600158,
-        "W1": 387.42771618057895,
-        "W2": 387.46908009602834,
-        "doom": 0.0435854170487665,
-        "escape": 0.045760731387873795,
+        "V1": 104.11884857820019,
+        "V2": 104.17998975773973,
+        "W1": 387.42786157721116,
+        "W2": 387.4692254926605,
+        "doom": 0.04358463755958079,
+        "escape": 0.045759950508198616,
         "boundary_probability": 0.0,
-        "research_cycles": 16.437545699470142,
-        "delegated_cycles": 11.289207820301934,
+        "research_cycles": 16.437352922402447,
+        "delegated_cycles": 11.28901504323424,
         "initial_action_joint": [
           [
             0.0,
@@ -2217,17 +2945,29 @@
           ]
         ],
         "diagnostics": {
-          "multiple_pure_state_games": 162,
+          "multiple_pure_state_games": 180,
           "mixed_state_games": 26,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
-        "welfare": 774.8967962766073,
-        "doom_given_escape": 0.9524632960808896,
+        "welfare": 774.8970870698716,
+        "doom_given_escape": 0.9524625152680598,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 91.9590347190296,
+          "research_safety_cost": 11.220256148380537,
+          "mortality_loss": 15.978723223786773,
+          "nonfatal_resource_loss": 1.5455947905756773
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "open/ban": {
         "policies": [
@@ -2274,14 +3014,26 @@
           "multiple_pure_state_games": 66,
           "mixed_state_games": 12,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
         "welfare": 778.3730315793646,
         "doom_given_escape": 0.9489082627453321,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 85.46160911037313,
+          "research_safety_cost": 10.301713911508381,
+          "mortality_loss": 7.732412458291833,
+          "nonfatal_resource_loss": 0.7370776747933405
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/open": {
         "policies": [
@@ -2289,15 +3041,15 @@
           "open"
         ],
         "planner": false,
-        "V1": 104.11874643646168,
-        "V2": 104.17988761600193,
-        "W1": 387.42771618057856,
-        "W2": 387.46908009602873,
-        "doom": 0.0435854170487665,
-        "escape": 0.045760731387873795,
+        "V1": 104.11884857819982,
+        "V2": 104.17998975774009,
+        "W1": 387.4278615772108,
+        "W2": 387.4692254926608,
+        "doom": 0.04358463755958079,
+        "escape": 0.045759950508198616,
         "boundary_probability": 0.0,
-        "research_cycles": 16.437545699470142,
-        "delegated_cycles": 11.289207820301932,
+        "research_cycles": 16.437352922402447,
+        "delegated_cycles": 11.28901504323424,
         "initial_action_joint": [
           [
             0.0,
@@ -2325,17 +3077,29 @@
           ]
         ],
         "diagnostics": {
-          "multiple_pure_state_games": 162,
+          "multiple_pure_state_games": 180,
           "mixed_state_games": 26,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
-        "welfare": 774.8967962766073,
-        "doom_given_escape": 0.9524632960808896,
+        "welfare": 774.8970870698716,
+        "doom_given_escape": 0.9524625152680598,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 91.95903471902959,
+          "research_safety_cost": 11.220256148380537,
+          "mortality_loss": 15.978723223786773,
+          "nonfatal_resource_loss": 1.5455947905756773
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/standard": {
         "policies": [
@@ -2343,15 +3107,15 @@
           "standard"
         ],
         "planner": false,
-        "V1": 104.11874643646203,
-        "V2": 104.17988761600193,
-        "W1": 387.4277161805792,
-        "W2": 387.46908009602896,
-        "doom": 0.0435854170487665,
-        "escape": 0.045760731387801644,
+        "V1": 104.11884857820017,
+        "V2": 104.17998975774009,
+        "W1": 387.4278615772114,
+        "W2": 387.46922549266117,
+        "doom": 0.04358463755958079,
+        "escape": 0.045759950508126465,
         "boundary_probability": 0.0,
-        "research_cycles": 16.437545699470252,
-        "delegated_cycles": 11.289207820302046,
+        "research_cycles": 16.43735292240256,
+        "delegated_cycles": 11.289015043234352,
         "initial_action_joint": [
           [
             0.0,
@@ -2379,17 +3143,29 @@
           ]
         ],
         "diagnostics": {
-          "multiple_pure_state_games": 162,
+          "multiple_pure_state_games": 180,
           "mixed_state_games": 26,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
-        "welfare": 774.8967962766081,
-        "doom_given_escape": 0.9524632960823914,
+        "welfare": 774.8970870698726,
+        "doom_given_escape": 0.9524625152695616,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 91.95903471903068,
+          "research_safety_cost": 11.220256148380749,
+          "mortality_loss": 15.978723223786773,
+          "nonfatal_resource_loss": 1.5455947905756773
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "standard/ban": {
         "policies": [
@@ -2436,14 +3212,26 @@
           "multiple_pure_state_games": 66,
           "mixed_state_games": 12,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
         "welfare": 778.3730315793646,
         "doom_given_escape": 0.9489082627459989,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 85.46160911037332,
+          "research_safety_cost": 10.301713911508422,
+          "mortality_loss": 7.732412458291833,
+          "nonfatal_resource_loss": 0.7370776747933405
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/open": {
         "policies": [
@@ -2490,14 +3278,26 @@
           "multiple_pure_state_games": 66,
           "mixed_state_games": 12,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
         "welfare": 778.3730315793646,
         "doom_given_escape": 0.9489082627453319,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 85.46160911037313,
+          "research_safety_cost": 10.301713911508381,
+          "mortality_loss": 7.732412458291833,
+          "nonfatal_resource_loss": 0.7370776747931984
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/standard": {
         "policies": [
@@ -2544,14 +3344,26 @@
           "multiple_pure_state_games": 66,
           "mixed_state_games": 12,
           "max_deviation_gain": 2.842170943040401e-14,
-          "state_games": 18225
+          "state_games": 115600
         },
         "welfare": 778.3730315793646,
         "doom_given_escape": 0.9489082627459989,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 85.4616091103733,
+          "research_safety_cost": 10.30171391150842,
+          "mortality_loss": 7.732412458291833,
+          "nonfatal_resource_loss": 0.7370776747931984
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       },
       "ban/ban": {
         "policies": [
@@ -2598,14 +3410,26 @@
           "multiple_pure_state_games": 6,
           "mixed_state_games": 0,
           "max_deviation_gain": 0.0,
-          "state_games": 18225
+          "state_games": 115600
         },
         "welfare": 781.6491565659935,
         "doom_given_escape": null,
+        "welfare_components": {
+          "baseline_no_loss": 711.6826265135851,
+          "task_surplus": 81.90496225306539,
+          "research_safety_cost": 11.938432200656912,
+          "mortality_loss": 0.0,
+          "nonfatal_resource_loss": 0.0
+        },
         "initial_delegate_probability": 0.0,
-        "grid_expansions": 0,
-        "capability_ceiling": 14.0,
-        "ai_ceiling": 100.0
+        "grid_expansions": 1,
+        "capability_ceiling": 34.5,
+        "ai_ceiling": 100.0,
+        "domain_certificate": {
+          "controlled_all_path_bound": 34.5,
+          "autonomous_all_path_bound": 85.0,
+          "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+        }
       }
     },
     "government_equilibria": [
@@ -2620,7 +3444,7 @@
           0.0,
           0.0
         ],
-        "deviation": 2.2737367544323206e-13
+        "deviation": 3.410605131648481e-13
       },
       {
         "p1": [
@@ -2646,7 +3470,7 @@
           0.5,
           0.0
         ],
-        "deviation": 2.2737367544323206e-13
+        "deviation": 2.8421709430404007e-13
       },
       {
         "p1": [
@@ -2659,7 +3483,7 @@
           0.0,
           0.0
         ],
-        "deviation": 2.2737367544323206e-13
+        "deviation": 3.410605131648481e-13
       },
       {
         "p1": [
@@ -2685,7 +3509,7 @@
           0.5,
           0.0
         ],
-        "deviation": 1.1368683772161603e-13
+        "deviation": 1.7053025658242404e-13
       },
       {
         "p1": [
@@ -2698,7 +3522,7 @@
           0.0,
           0.0
         ],
-        "deviation": 2.2737367544323206e-13
+        "deviation": 2.8421709430404007e-13
       },
       {
         "p1": [
@@ -2724,7 +3548,7 @@
           0.5,
           0.0
         ],
-        "deviation": 1.1368683772161603e-13
+        "deviation": 1.7053025658242404e-13
       }
     ],
     "coordinated": "ban/ban",
@@ -2777,10 +3601,296 @@
       },
       "welfare": 781.6710908631128,
       "doom_given_escape": 2.513947000308181e-07,
+      "welfare_components": {
+        "baseline_no_loss": 711.6826265135851,
+        "task_surplus": 82.48133857978449,
+        "research_safety_cost": 12.376890494209212,
+        "mortality_loss": 4.594582492245536e-08,
+        "nonfatal_resource_loss": 0.11598369010158649
+      },
       "initial_delegate_probability": 0.0,
-      "grid_expansions": 0,
-      "capability_ceiling": 14.0,
-      "ai_ceiling": 100.0
+      "grid_expansions": 1,
+      "capability_ceiling": 34.5,
+      "ai_ceiling": 100.0,
+      "domain_certificate": {
+        "controlled_all_path_bound": 34.5,
+        "autonomous_all_path_bound": 85.0,
+        "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+      }
+    }
+  },
+  "fixed_long_horizon": {
+    "policies": [
+      "open",
+      "open"
+    ],
+    "planner": false,
+    "V1": 104.11884857819983,
+    "V2": 104.17998975773975,
+    "W1": 387.4278615772105,
+    "W2": 387.46922549266026,
+    "doom": 0.04358463755958079,
+    "escape": 0.045759950508270766,
+    "boundary_probability": 0.0,
+    "research_cycles": 16.437352922402336,
+    "delegated_cycles": 11.28901504323413,
+    "initial_action_joint": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "diagnostics": {
+      "multiple_pure_state_games": 180,
+      "mixed_state_games": 26,
+      "max_deviation_gain": 2.842170943040401e-14,
+      "state_games": 115600
+    },
+    "welfare": 774.8970870698707,
+    "doom_given_escape": 0.9524625152665581,
+    "welfare_components": {
+      "baseline_no_loss": 711.6826265135851,
+      "task_surplus": 91.9590347190285,
+      "research_safety_cost": 11.220256148380326,
+      "mortality_loss": 15.978723223786773,
+      "nonfatal_resource_loss": 1.5455947905756773
+    },
+    "fixed_policy_cumulative_risk": [
+      {
+        "year": 0,
+        "escape": 0.0,
+        "doom": 0.0
+      },
+      {
+        "year": 1,
+        "escape": 0.0,
+        "doom": 0.0
+      },
+      {
+        "year": 2,
+        "escape": 0.0,
+        "doom": 0.0
+      },
+      {
+        "year": 3,
+        "escape": 0.005407452336306637,
+        "doom": 0.0
+      },
+      {
+        "year": 4,
+        "escape": 0.012731678090599512,
+        "doom": 0.0
+      },
+      {
+        "year": 5,
+        "escape": 0.020545773963454434,
+        "doom": 0.0
+      },
+      {
+        "year": 6,
+        "escape": 0.027998296847435614,
+        "doom": 0.0
+      },
+      {
+        "year": 7,
+        "escape": 0.033934838858901153,
+        "doom": 0.00048338586464314833
+      },
+      {
+        "year": 8,
+        "escape": 0.03914023080376873,
+        "doom": 0.009843376159751272
+      },
+      {
+        "year": 9,
+        "escape": 0.04115156363050393,
+        "doom": 0.018338058372263592
+      },
+      {
+        "year": 10,
+        "escape": 0.04229056135041513,
+        "doom": 0.025938718714409996
+      },
+      {
+        "year": 11,
+        "escape": 0.04270775815777918,
+        "doom": 0.03182974246882549
+      },
+      {
+        "year": 12,
+        "escape": 0.043902379059536034,
+        "doom": 0.03701162106259824
+      },
+      {
+        "year": 13,
+        "escape": 0.044835174720862014,
+        "doom": 0.03901325229478771
+      },
+      {
+        "year": 14,
+        "escape": 0.04575652166214948,
+        "doom": 0.040142959050350493
+      },
+      {
+        "year": 15,
+        "escape": 0.04575983585518557,
+        "doom": 0.04055733366094048
+      },
+      {
+        "year": 16,
+        "escape": 0.04575993198842215,
+        "doom": 0.04174521930700674
+      },
+      {
+        "year": 17,
+        "escape": 0.04575994447775842,
+        "doom": 0.04266545349012821
+      },
+      {
+        "year": 18,
+        "escape": 0.04575994981311021,
+        "doom": 0.04358129691594789
+      },
+      {
+        "year": 19,
+        "escape": 0.0457599503912573,
+        "doom": 0.04358458363948936
+      },
+      {
+        "year": 20,
+        "escape": 0.04575995048588891,
+        "doom": 0.04358463755958079
+      },
+      {
+        "year": 21,
+        "escape": 0.04575995050528232,
+        "doom": 0.04358463755958079
+      },
+      {
+        "year": 22,
+        "escape": 0.04575995050773654,
+        "doom": 0.04358463755958079
+      },
+      {
+        "year": 23,
+        "escape": 0.04575995050814598,
+        "doom": 0.04358463755958079
+      },
+      {
+        "year": 24,
+        "escape": 0.04575995050824072,
+        "doom": 0.04358463755958079
+      },
+      {
+        "year": 25,
+        "escape": 0.045759950508270766,
+        "doom": 0.04358463755958079
+      }
+    ],
+    "initial_delegate_probability": 0.0,
+    "grid_expansions": 1,
+    "capability_ceiling": 34.5,
+    "ai_ceiling": 100.0,
+    "domain_certificate": {
+      "controlled_all_path_bound": 34.5,
+      "autonomous_all_path_bound": 85.0,
+      "covers": "every action path from a1=a2=1 through the finite horizon, including deviations"
+    }
+  },
+  "certificates": {
+    "reference": {
+      "binding": {
+        "max_delegated_deviation": 1.3891247843112637,
+        "player": 1,
+        "a1": 2.0,
+        "a2": 2.5,
+        "remaining_years": 10,
+        "action": "delegate_high",
+        "N": 1.5026694292624052,
+        "H": 29.131519141574152,
+        "q": 0.004060058497098381,
+        "financing_slack": 0.6905500638311527
+      },
+      "passes": false,
+      "scope": "all states and dates of this finite grid game; not all equilibria or an unbounded-state limit",
+      "empty_feasible_delegated_set": false,
+      "action_reachable_binding": {
+        "max_delegated_deviation": 1.3480592956196276,
+        "player": 1,
+        "a1": 2.0,
+        "a2": 2.0,
+        "remaining_years": 8,
+        "action": "delegate_high"
+      },
+      "action_reachable_passes": false,
+      "action_reachable_empty_delegated_set": false
+    },
+    "25 years": {
+      "binding": {
+        "max_delegated_deviation": 1.7819612308287986,
+        "player": 1,
+        "a1": 6.0,
+        "a2": 4.5,
+        "remaining_years": 25,
+        "action": "delegate_high",
+        "N": 2.171917442496556,
+        "H": 100.04890014374466,
+        "q": 0.004060058497098381,
+        "financing_slack": 0.8377903849497457
+      },
+      "passes": false,
+      "scope": "all states and dates of this finite grid game; not all equilibria or an unbounded-state limit",
+      "empty_feasible_delegated_set": false,
+      "action_reachable_binding": {
+        "max_delegated_deviation": 1.3914299176500151,
+        "player": 1,
+        "a1": 2.0,
+        "a2": 2.5,
+        "remaining_years": 12,
+        "action": "delegate_high"
+      },
+      "action_reachable_passes": false,
+      "action_reachable_empty_delegated_set": false
+    },
+    "empirical bridge": {
+      "binding": {
+        "max_delegated_deviation": 7.399326426535566,
+        "player": 1,
+        "a1": 2.0,
+        "a2": 12.5,
+        "remaining_years": 10,
+        "action": "delegate_high",
+        "N": 7.599242367856405,
+        "H": 51.29132310729604,
+        "q": 0.004060058497098381,
+        "financing_slack": 0.2221943107735549
+      },
+      "passes": false,
+      "scope": "all states and dates of this finite grid game; not all equilibria or an unbounded-state limit",
+      "empty_feasible_delegated_set": false,
+      "action_reachable_binding": null,
+      "action_reachable_passes": true,
+      "action_reachable_empty_delegated_set": true
     }
   },
   "autonomous_continuation": [

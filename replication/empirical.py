@@ -101,9 +101,24 @@ def fit_logit(d,metric='eci',ties=False,quadratic=True):
     np.add.at(scores,idx,X*(y-p)[:,None])
     correction=len(groups)/(len(groups)-1)*(len(d)-1)/(len(d)-X.shape[1])
     covariance=correction*bread@(scores.T@scores)@bread
+    # Dyadic sensitivity: observations may covary whenever either endpoint model is shared.
+    model_names=np.unique(np.r_[d.model_a.to_numpy(),d.model_b.to_numpy()])
+    node_scores=np.zeros((len(model_names),X.shape[1]));individual=X*(y-p)[:,None]
+    np.add.at(node_scores,np.searchsorted(model_names,d.model_a.to_numpy()),individual)
+    distinct=(d.model_a!=d.model_b).to_numpy()
+    np.add.at(node_scores,np.searchsorted(model_names,d.model_b.to_numpy()[distinct]),individual[distinct])
+    distinct_groups=np.array([key.split('|')[0]!=key.split('|')[1] for key in groups])
+    dyadic=bread@(node_scores.T@node_scores-scores[distinct_groups].T@scores[distinct_groups])@bread
+    dyadic_diagonal=np.diag(dyadic)
+    # Finite dyadic sandwiches need not be positive semidefinite; report that explicitly.
+    dyadic_se=[float(np.sqrt(v)) if v>=0 else None for v in dyadic_diagonal]
+    low,high=float(min(d[metric+'_a'].min(),d[metric+'_b'].min())),float(max(d[metric+'_a'].max(),d[metric+'_b'].max()))
     return {'n':len(d),'models':len(set(d.model_a)|set(d.model_b)),'clusters':len(groups),
             'coef':result.x.tolist(),'se':np.sqrt(np.diag(covariance)).tolist(),
             'covariance':covariance.tolist(),
+            'se_dyadic':dyadic_se,'covariance_dyadic':dyadic.tolist(),
+            'dyadic_min_eigenvalue':float(np.linalg.eigvalsh((dyadic+dyadic.T)/2).min()),
+            'score_min':low,'score_max':high,
             'metric':metric,'ties':ties,'quadratic':quadratic,
             'log_likelihood':-float(objective(result.x)[0]),
             'score_per_observation':float(np.max(np.abs(score))/len(d))}
@@ -161,6 +176,14 @@ def run():
     for f in sorted(set(cross.loc[cross.status=='primary','family'])):
         sub=first[(first.family_a!=f)&(first.family_b!=f)]
         results['exclude_'+f]=fit_logit(sub)
+    principal=first.dropna(subset=['eci_a','eci_b'])
+    decisive=principal[principal.winner.isin(['model_a','model_b'])]
+    attrition={'raw':len(raw),'first_round':len(first),'primary_first_round_all_outcomes':len(principal),
+               'excluded_ties':int((principal.winner=='tie').sum()),'excluded_both_bad':int((principal.winner=='both_bad').sum()),
+               'principal_decisive':len(decisive),'share_of_raw':len(decisive)/len(raw)}
+    assert attrition['primary_first_round_all_outcomes']-attrition['excluded_ties']-attrition['excluded_both_bad']==len(decisive)
+    incidence=pd.concat([decisive.model_a,decisive.model_b]).value_counts().rename_axis('arena_model').rename('decisive_incidence').reset_index()
+    cross.merge(incidence,on='arena_model',how='left').to_csv(OUT/'tables/model_support.csv',index=False)
     # Cost data: exact names, exclude post-training derivatives sharing a base training run.
     models=pd.read_csv(RAW/'epoch_models.csv')
     cost=models[['Model','Publication date','Training compute cost (2023 USD)','Training compute (FLOP)']].merge(
@@ -188,7 +211,7 @@ def run():
     output={'sample':{'raw':len(raw),'first_round':int((raw.evaluation_order==1).sum()),
                       'raw_models':len(cross),'primary_matched_models':int((cross.status=='primary').sum()),
                       'first_date':str(raw.timestamp.min()),'last_date':str(raw.timestamp.max())},
-            'preference':results,'cost':cost_results,'calibration':calibration}
+            'preference':results,'cost':cost_results,'calibration':calibration,'attrition':attrition}
     (OUT/'empirical.json').write_text(json.dumps(output,indent=2)+'\n')
     rows=[]
     for name,r in results.items():
@@ -216,6 +239,18 @@ def run():
     ax[1].plot(xx,np.exp(b[0]+b[1]*(xx-140)/10)/1e6,color='#ad592a')
     ax[1].set(yscale='log',xlabel='ECI',ylabel='Training compute cost (2023 USD million)',title='B. Distinct training runs, exact matches')
     fig.tight_layout();fig.savefig(OUT/'figures/evidence.pdf');fig.savefig(OUT/'figures/evidence.png',dpi=180);plt.close(fig)
+    fig,axes=plt.subplots(2,2,figsize=(8,5.1));curves=[]
+    for key,label,column in [('eci_quadratic','Principal ECI',0),('eci_gpqa_common','Common-sample ECI',0),('gpqa_common','Common-sample GPQA',1)]:
+        r=results[key];center,scale=(140.,10.) if r['metric']=='eci' else (.6,.1)
+        xx=np.linspace(r['score_min'],r['score_max'],100);zz=(xx-center)/scale
+        level=r['coef'][1]*zz+r['coef'][2]*zz**2;slope=(r['coef'][1]+2*r['coef'][2]*zz)/scale
+        axes[0,column].plot(xx,level,label=label);axes[1,column].plot(xx,slope,label=label)
+        curves.extend({'specification':key,'capability_score':float(v),'latent_level':float(l),'marginal_per_score_point':float(s)} for v,l,s in zip(xx,level,slope))
+    for col,metric in enumerate(['ECI','GPQA']):
+        axes[0,col].set(ylabel='Latent level (centered)',title=metric);axes[0,col].legend(frameon=False,fontsize=7)
+        axes[1,col].axhline(0,color='gray',linewidth=.6);axes[1,col].set(xlabel=metric,ylabel='Latent marginal preference')
+    fig.tight_layout();fig.savefig(OUT/'figures/preference_support.pdf');fig.savefig(OUT/'figures/preference_support.png',dpi=160);plt.close(fig)
+    pd.DataFrame(curves).to_csv(OUT/'tables/preference_curves.csv',index=False)
     print(json.dumps({'sample':output['sample'],'primary':results['eci_quadratic'],'cost':cost_results,'calibration':calibration},indent=2))
     return output
 

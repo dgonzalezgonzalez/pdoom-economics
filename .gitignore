@@ -17,4 +17,6 @@ review/bundle.md
 review/bundle.txt
 review/repository-snapshot.zip
 output/latex_build.log
+output/model_run.log
+output/paper_build.log
 

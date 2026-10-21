@@ -59,6 +59,13 @@ class RangeFile(io.RawIOBase):
 
 def arena():
     path = RAW / "arena_numeric.parquet"
+    if path.exists():
+        manifest_path=ROOT/'data/data_manifest.json'
+        entry=json.loads(manifest_path.read_text())['arena'] if manifest_path.exists() else None
+        digest=hashlib.sha256(path.read_bytes()).hexdigest()
+        if not entry or not entry.get('revision') or entry.get('sha256')!=digest:
+            raise ValueError('Cached Arena bytes need their original immutable revision and matching hash; do not relabel them from a live API.')
+        return entry
     info = get("https://huggingface.co/api/datasets/lmarena-ai/arena-human-preference-140k").json()
     revision = info["sha"]
     tree = get(f"https://huggingface.co/api/datasets/lmarena-ai/arena-human-preference-140k/tree/{revision}?recursive=true").json()
@@ -90,7 +97,7 @@ if __name__ == "__main__":
             manifest[name] = task()
             print(name, "complete", flush=True)
         except Exception as e:
-            manifest[name] = {"error": str(e)}
+            if name not in manifest:manifest[name] = {"error": str(e)}
             print(name, str(e), flush=True)
         manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     for url, name in [("https://epoch.ai/benchmarks/use-this-data", "epoch_download_page.html"),
