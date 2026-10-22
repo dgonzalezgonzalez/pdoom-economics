@@ -159,7 +159,7 @@ Scenario results saved.
   },
   "model_checks": "passed",
   "pdf": {
-    "pages": 32,
+    "pages": 31,
     "page_details": [
       {
         "page": 1,
@@ -313,48 +313,43 @@ Scenario results saved.
       },
       {
         "page": 26,
-        "characters": 1734,
+        "characters": 1620,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 27,
-        "characters": 2160,
+        "characters": 2359,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 28,
-        "characters": 2681,
+        "characters": 975,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 29,
-        "characters": 2772,
+        "characters": 3044,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 30,
-        "characters": 1741,
+        "characters": 2887,
         "width": 612.0,
         "height": 792.0
       },
       {
         "page": 31,
-        "characters": 555,
-        "width": 612.0,
-        "height": 792.0
-      },
-      {
-        "page": 32,
-        "characters": 1590,
+        "characters": 1743,
         "width": 612.0,
         "height": 792.0
       }
     ],
-    "overfull_boxes": 0
+    "overfull_boxes": 0,
+    "latex_passes": 4
   },
-  "seconds": 195.01
+  "seconds": 171.56
 }

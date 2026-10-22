@@ -34,6 +34,7 @@
     "pyarrow": "23.0.1",
     "PyMuPDF": "1.28.2"
   },
+  "model_checks": "passed",
   "pdf": {
     "pages": 31,
     "page_details": [
@@ -224,7 +225,8 @@
         "height": 792.0
       }
     ],
-    "overfull_boxes": 0
+    "overfull_boxes": 0,
+    "latex_passes": 4
   },
-  "seconds": 7.18
+  "seconds": 171.56
 }
